@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #433D3C;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +9,66 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.fas.fa-utensil-spoon {
+    color: #FFB703;
+}
+
+.container-home-daan {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+.navbar-lewagon {
+    height: 70px;
+    padding-top: 12px;
+    z-index: 2000;
+}
+
+.home-navbar-menu a {
+    text-decoration: none;
+    color: gray;
+}
+
+.home-navbar-menu a:hover{
+  color: $primary
+}
+
+.home-owner {
+    margin: 6px;
+    color: black;
+}
+
+.home-icon {
+    display: flex;
+    color: #FFB703;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.home-navbar-text {
+    margin-left: 20px;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 20px;
+  background-color: white;
+  height: 42px;
+  width: 90px;
+  border: #FFB703 1px solid;
+  border-radius: 25px;
+  margin-bottom: 5px;
+}
+
+.icon-menu {
+  width: 10px;
+  height: 10px;
+  background-color: white;
 }
