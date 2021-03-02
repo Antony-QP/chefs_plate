@@ -12,15 +12,21 @@
   color: white;
 }
 
-.home-card-image {
+.container-homepage {
+  margin: 120px 200px 0px 200px;
+  padding-left: 30px;
+}
+
+.homepage-card-image {
   background-size: cover;
   background-position: center;
   width: 100%;
   height: 200px;
   radius: 25px;
+  border-radius: 16px;
 }
 
-homepage-cards {
+.homepage-cards {
   display: flex;
   margin-bottom: 120px;
   justify-content: space-between;
