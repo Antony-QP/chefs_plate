@@ -1,11 +1,12 @@
 require 'faker'
+require 'open-uri'
 
 puts "Cleaning database"
-User.destroy_all
 Follower.destroy_all
 Menu.destroy_all
 Post.destroy_all
 Chef.destroy_all
+User.destroy_all
 Restaurant.destroy_all
 
 puts "Creating users"
@@ -21,7 +22,7 @@ user_9 = User.create!(email: "ozzy@gmail.com", password: "123456")
 user_10 = User.create!(email: "sarah@gmail.com", password: "123456")
 
 
-puts "Adding restaurants"
+puts "Creating restaurants"
 restaurant_1 = Restaurant.create!({
     name: Faker::Restaurant.name,
     location: "Abeelstraat 83"
@@ -63,7 +64,7 @@ restaurant_10 = Restaurant.create!({
     location: "Anna Maria Geertruida Schmidtlaan 114"
 })
 
-puts "Adding chefs"
+puts "Creating chefs"
 chef_1 = Chef.new({
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
@@ -168,137 +169,197 @@ chef_10.save!
 
 puts "Creating posts"
 
-post_1 = Post.create!({
+post_1_picture = URI.open('https://images.unsplash.com/photo-1455279032140-49a4bf46f343?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDd8fGNoZWYlMjBjb29raW5nfGVufDB8fDB8&auto=format&fit=crop&w=800&q=60')
+post_1 = Post.new({
     description: Faker::Food.description,
     chef_id: chef_1.id
 })
+post_1.photo.attach(io: post_1_picture, filename: 'post1.png', content_type: 'image/png')
+post_1.save!
 
-post_2 = Post.create!({
+post_2_picture = URI.open('https://images.unsplash.com/photo-1601002177343-070d8f2d3496?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hlZiUyMGNvb2tpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+post_2 = Post.new({
     description: Faker::Food.description, 
     chef_id: chef_1.id
 })
+post_2.photo.attach(io: post_2_picture, filename: 'post2.png', content_type: 'image/png')
+post_2.save!
 
-post_3 = Post.create!({
+post_3_picture = URI.open('https://images.unsplash.com/photo-1447279506476-3faec8071eee?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2hlZiUyMGNvb2tpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+post_3 = Post.new({
     description: Faker::Food.description, 
     chef_id: chef_2.id
 })
+post_3.photo.attach(io: post_3_picture, filename: 'post3.png', content_type: 'image/png')
+post_3.save!
 
-post_4 = Post.create!({
+post_4_picture = URI.open('https://images.unsplash.com/photo-1601001815853-3835274403b3?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTN8fGNoZWYlMjBjb29raW5nfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+post_4 = Post.new({
     description: Faker::Food.description, 
     chef_id: chef_2.id
 })
+post_4.photo.attach(io: post_4_picture, filename: 'post4.png', content_type: 'image/png')
+post_4.save!
 
-post_5 = Post.create!({
+post_5_picture = URI.open('https://images.unsplash.com/photo-1581349485608-9469926a8e5e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTl8fGNoZWYlMjBjb29raW5nfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+post_5 = Post.new({
     description: Faker::Food.description, 
     chef_id: chef_3.id
 })
+post_5.photo.attach(io: post_5_picture, filename: 'post5.png', content_type: 'image/png')
+post_5.save!
 
-post_6 = Post.create!({
+post_6_picture = URI.open('https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjZ8fGNoZWYlMjBjb29raW5nfGVufDB8fDB8&auto=format&fit=crop&w=800&q=60')
+post_6 = Post.new({
     description: Faker::Food.description, 
     chef_id: chef_3.id
 })
+post_6.photo.attach(io: post_6_picture, filename: 'post6.png', content_type: 'image/png')
+post_6.save!
 
-post_7 = Post.create!({
+post_7_picture = URI.open('https://images.unsplash.com/photo-1560963689-b9e9773ff232?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTd8fGNoZWYlMjBjb29raW5nfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+post_7 = Post.new({
     description: Faker::Food.description, 
     chef_id: chef_4.id
 })
+post_7.photo.attach(io: post_7_picture, filename: 'post7.png', content_type: 'image/png')
+post_7.save!
 
-post_8 = Post.create!({
+post_8_picture = URI.open('https://images.unsplash.com/photo-1611520049321-06bb9102dbda?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OHx8bG9ic3RlcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+post_8 = Post.new({
     description: Faker::Food.description, 
     chef_id: chef_4.id
 })
+post_8.photo.attach(io: post_8_picture, filename: 'post8.png', content_type: 'image/png')
+post_8.save!
 
-post_9 = Post.create!({
+post_9_picture = URI.open('https://images.unsplash.com/photo-1605760652327-d25d8305009c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTR8fGxvYnN0ZXJ8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+post_9 = Post.new({
     description: Faker::Food.description, 
     chef_id: chef_5.id
 })
+post_9.photo.attach(io: post_9_picture, filename: 'post9.png', content_type: 'image/png')
+post_9.save!
 
-post_10 = Post.create!({
+post_10_picture = URI.open('https://images.unsplash.com/photo-1610978884240-96090bd249cc?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzd8fGxvYnN0ZXJ8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+post_10 = Post.new({
     description: Faker::Food.description, 
     chef_id: chef_5.id
 })
+post_10.photo.attach(io: post_10_picture, filename: 'post10.png', content_type: 'image/png')
+post_10.save!
 
 puts "Creating Menus"
 
-menu_1 = Menu.create!({
+menu_1_picture_1 = URI.open('https://images.unsplash.com/photo-1455279032140-49a4bf46f343?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDd8fGNoZWYlMjBjb29raW5nfGVufDB8fDB8&auto=format&fit=crop&w=800&q=60')
+menut_1_picture_2 = URI.open('https://images.unsplash.com/photo-1455279032140-49a4bf46f343?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDd8fGNoZWYlMjBjb29raW5nfGVufDB8fDB8&auto=format&fit=crop&w=800&q=60')
+menu_1 = Menu.new({
     title: "5 course spring menu",
     chefs_note: Faker::Lorem.sentence(word_count: 20),
     price: Faker::Number.decimal(l_digits: 2),
     cuisine: "French",
     chef_id: chef_1.id
 })
+menu_1.save!
 
-menu_2 = Menu.create!({
+menu_2_picture_1 = URI.open('https://images.unsplash.com/photo-1601002177343-070d8f2d3496?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hlZiUyMGNvb2tpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+menu_2_picture_2 = URI.open('https://images.unsplash.com/photo-1601002177343-070d8f2d3496?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hlZiUyMGNvb2tpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+menu_2 = Menu.new({
     title: "5 course winter menu",
     chefs_note: Faker::Lorem.sentence(word_count: 20),
     price: Faker::Number.decimal(l_digits: 2),
     cuisine: "French",
     chef_id: chef_1.id
 })
+menu_2.save!
 
-menu_3 = Menu.create!({
+menu_3_picture_1 = URI.open('https://images.unsplash.com/photo-1601002177343-070d8f2d3496?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hlZiUyMGNvb2tpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+menu_3_picture_2 = URI.open('https://images.unsplash.com/photo-1601002177343-070d8f2d3496?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hlZiUyMGNvb2tpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+menu_3 = Menu.new({
     title: "Summer menu",
     chefs_note: Faker::Lorem.sentence(word_count: 20),
     price: Faker::Number.decimal(l_digits: 2),
     cuisine: "French",
     chef_id: chef_2.id
 })
+menu_3.save!
 
-menu_4 = Menu.create!({
+menu_4_picture_1 = URI.open('https://images.unsplash.com/photo-1601002177343-070d8f2d3496?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hlZiUyMGNvb2tpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+menu_4_picture_2 = URI.open('https://images.unsplash.com/photo-1601002177343-070d8f2d3496?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hlZiUyMGNvb2tpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+menu_4 = Menu.new({
     title: "Special atlantic fish menu",
     chefs_note: Faker::Lorem.sentence(word_count: 20),
     price: Faker::Number.decimal(l_digits: 2),
     cuisine: "Spanish",
     chef_id: chef_2.id
 })
+menu_4.save!
 
-menu_5 = Menu.create!({
+menu_5_picture_1 = URI.open('https://images.unsplash.com/photo-1601002177343-070d8f2d3496?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hlZiUyMGNvb2tpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+menu_5_picture_2 = URI.open('https://images.unsplash.com/photo-1601002177343-070d8f2d3496?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hlZiUyMGNvb2tpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+menu_5 = Menu.new({
     title: "Scottish menu - December",
     chefs_note: Faker::Lorem.sentence(word_count: 20),
     price: Faker::Number.decimal(l_digits: 2),
     cuisine: "Traditional European",
     chef_id: chef_3.id
 })
+menu_5.save!
 
-menu_6 = Menu.create!({
+menu_6_picture_1 = URI.open('https://images.unsplash.com/photo-1601002177343-070d8f2d3496?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hlZiUyMGNvb2tpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+menu_6_picture_2 = URI.open('https://images.unsplash.com/photo-1601002177343-070d8f2d3496?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hlZiUyMGNvb2tpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+menu_6 = Menu.new({
     title: "August game menu",
     chefs_note: Faker::Lorem.sentence(word_count: 20),
     price: Faker::Number.decimal(l_digits: 2),
     cuisine: "British",
     chef_id: chef_3.id
 })
+menu_6.save!
 
-menu_7 = Menu.create!({
+menu_7_picture_1 = URI.open('https://images.unsplash.com/photo-1601002177343-070d8f2d3496?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hlZiUyMGNvb2tpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+menu_7_picture_2 = URI.open('https://images.unsplash.com/photo-1601002177343-070d8f2d3496?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hlZiUyMGNvb2tpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+menu_7 = Menu.new({
     title: "July menu",
     chefs_note: Faker::Lorem.sentence(word_count: 20),
     price: Faker::Number.decimal(l_digits: 2),
     cuisine: "French",
     chef_id: chef_4.id
 })
+menu_7.save!
 
-menu_8 = Menu.create!({
+menu_8_picture_1 = URI.open('https://images.unsplash.com/photo-1601002177343-070d8f2d3496?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hlZiUyMGNvb2tpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+menu_8_picture_2 = URI.open('https://images.unsplash.com/photo-1601002177343-070d8f2d3496?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hlZiUyMGNvb2tpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+menu_8 = Menu.new({
     title: "January winter menu",
     chefs_note: Faker::Lorem.sentence(word_count: 20),
     price: Faker::Number.decimal(l_digits: 2),
     cuisine: "British",
     chef_id: chef_4.id
 })
+menu_8.save!
 
-menu_9 = Menu.create!({
+menu_9_picture_1 = URI.open('https://images.unsplash.com/photo-1601002177343-070d8f2d3496?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hlZiUyMGNvb2tpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+menu_9_picture_2 = URI.open('https://images.unsplash.com/photo-1601002177343-070d8f2d3496?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hlZiUyMGNvb2tpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+menu_9 = Menu.new({
     title: "April seafood menu",
     chefs_note: Faker::Lorem.sentence(word_count: 20),
     price: Faker::Number.decimal(l_digits: 2),
     cuisine: "Italian",
     chef_id: chef_5.id
 })
+menu_9.save!
 
-menu_10 = Menu.create!({
+menu_10_picture_1 = URI.open('https://images.unsplash.com/photo-1601002177343-070d8f2d3496?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hlZiUyMGNvb2tpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+menu_10_picture_2 = URI.open('https://images.unsplash.com/photo-1601002177343-070d8f2d3496?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hlZiUyMGNvb2tpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+menu_10 = Menu.new({
     title: "Trial menu - Summer",
     chefs_note: Faker::Lorem.sentence(word_count: 20),
     price: Faker::Number.decimal(l_digits: 2),
     cuisine: "Scandinavian",
     chef_id: chef_5.id
 })
+menu_10.save!
 
 puts "Creating followers"
 
