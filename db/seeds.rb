@@ -252,7 +252,7 @@ post_10.save!
 puts "Creating Menus"
 
 menu_1_picture_1 = URI.open('https://images.unsplash.com/photo-1455279032140-49a4bf46f343?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDd8fGNoZWYlMjBjb29raW5nfGVufDB8fDB8&auto=format&fit=crop&w=800&q=60')
-menut_1_picture_2 = URI.open('https://images.unsplash.com/photo-1455279032140-49a4bf46f343?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDd8fGNoZWYlMjBjb29raW5nfGVufDB8fDB8&auto=format&fit=crop&w=800&q=60')
+menu_1_picture_2 = URI.open('https://images.unsplash.com/photo-1455279032140-49a4bf46f343?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDd8fGNoZWYlMjBjb29raW5nfGVufDB8fDB8&auto=format&fit=crop&w=800&q=60')
 menu_1 = Menu.new({
     title: "5 course spring menu",
     chefs_note: Faker::Lorem.sentence(word_count: 20),
@@ -260,6 +260,8 @@ menu_1 = Menu.new({
     cuisine: "French",
     chef_id: chef_1.id
 })
+menu_1.photos.attach(io: menu_1_picture_1, filename: 'post1.png', content_type: 'image/png')
+menu_1.photos.attach(io: menu_1_picture_2, filename: 'post1.png', content_type: 'image/png')
 menu_1.save!
 
 menu_2_picture_1 = URI.open('https://images.unsplash.com/photo-1601002177343-070d8f2d3496?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hlZiUyMGNvb2tpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
