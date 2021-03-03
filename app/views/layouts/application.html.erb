@@ -12,6 +12,7 @@
   </head>
 
   <body>
+    <%= image_tag current_user.avatar, height: "40px", width: "40px", class: "rounded-circle" %>
     <%= yield %>
   </body>
 </html>
