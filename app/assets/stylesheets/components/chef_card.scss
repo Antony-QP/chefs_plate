@@ -1,0 +1,22 @@
+.chef-card{
+    width: 100%;
+    height: 45vh;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.chef-card-img{
+    width: 33%;
+    height: 130px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 5px;
+}
+
+.chef-card-img-container{
+    display: flex
+}
+
+.chef-card i:hover{
+    font-size: 20px;
+}
