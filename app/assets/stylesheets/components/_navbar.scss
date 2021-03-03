@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #433D3C;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -10,3 +10,80 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+
+.container-home-daan {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+.navbar-lewagon {
+    height: 70px;
+    padding-top: 12px;
+    z-index: 2000;
+}
+
+.home-navbar-menu a {
+    text-decoration: none;
+    color: gray;
+}
+
+.home-navbar-menu a:hover{
+  color: $primary
+}
+
+.home-owner {
+    margin: 6px;
+    color: black;
+}
+
+.home-icon {
+    display: flex;
+    color: #FFB703;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.home-icon2 {
+    margin-left: -10px;
+}
+
+
+.chef-hat {
+  height: 63px;
+  width: 63px;
+  margin-bottom: 7px;
+}
+
+.home-navbar-text {
+  margin-top: 17px;
+  margin-left: 10px;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 20px;
+  background-color: white;
+  height: 42px;
+  width: 85px;
+  border: #FFB703 1px solid;
+  border-radius: 25px;
+  margin-bottom: 5px;
+}
+
+.fas.fa-bars {
+  color: #FFB703;
+  margin-top: 5px;
+  margin-left: -3px;
+}
+
+.fas.fa-bars:hover {
+  color: #ffcd03;
+}
+
+
