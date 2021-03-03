@@ -37,7 +37,7 @@ restaurant_3 = Restaurant.create!({
 })
 restaurant_4 = Restaurant.create!({
     name: Faker::Restaurant.name,
-    location: "Viaductstraat 200"
+    location: "Wibautstraat 276"
 })
 restaurant_5 = Restaurant.create!({
     name: Faker::Restaurant.name,
@@ -49,7 +49,7 @@ restaurant_6 = Restaurant.create!({
 })
 restaurant_7 = Restaurant.create!({
     name: Faker::Restaurant.name,
-    location: "Armstraat 175"
+    location: "Bos en Lommerweg 113"
 })
 restaurant_8 = Restaurant.create!({
     name: Faker::Restaurant.name,
