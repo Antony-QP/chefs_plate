@@ -1,5 +1,29 @@
+
+<div class="w-50">
+  <% @chefs.each do |chef| %>
+  <div class="chef-card mb-2">
+    <div class="d-flex justify-content-between mb-2 border-bottom">
+      <div class=""><span class="font-weight-bold"><%= chef.first_name %> <%= chef.last_name %></span> - <span><%= chef.restaurant.name %></span> </div>
+      <div class=""><a href="#"><i class="far fa-heart text-primary"></i></a></div>
+    </div>
+    <div class="">
+      <i class="fas fa-map-marker-alt text-primary mr-2"></i><%= chef.restaurant.location %>
+    </div>
+    <div class="chef-card-img-container">
+        <div class="chef-card-img rounded" style="background-image: url('<%= cl_image_path chef.photos[0].key, crop: :fill %>')"></div>
+        <div class="chef-card-img rounded" style="background-image: url('<%= cl_image_path chef.menus[0].photos[0].key, crop: :fill %>')"></div>
+        <div class="chef-card-img rounded" style="background-image: url('<%= cl_image_path chef.menus[0].photos[1].key, crop: :fill %>')"></div>
+    </div>
+    <p></p>
+    <p></p>
+    <p></p>
+  </div>
+  <% end %>
+</div>
+
 <div id="map"
      style="width: 50%; height: 100vh; position:sticky;"
      data-markers="<%= @markers.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-     </div>
+</div>
+
