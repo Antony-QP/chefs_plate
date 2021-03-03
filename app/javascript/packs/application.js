@@ -32,14 +32,48 @@ const map = document.getElementById("map")
 const icon = document.querySelector('#map-toggle')
 const gridContainer = document.querySelector(".chef-card-grid-container")
 const chefFlexContainer = document.querySelector(".chef-flex-container")
+const gridIcon = document.querySelector("#grid-icon")
 
-icon.addEventListener('click', () => {
+
+const insertMap = () => {
+  // if(gridContainer.classList.contains("toggle-single-column")){
+  //   gridContainer.classList.remove("toggle-single-column")
+  // }else{
+  //   gridContainer.classList.add("toggle-single-column")
+  // }
+
+  // if(gridContainer.classList.contains("toggle-half-width")){
+  //   gridContainer.classList.remove("toggle-half-width")
+  // }else{
+  //   gridContainer.classList.add("toggle-half-width")
+  // }
+
+  // if(map.classList.contains("toggle-hide-content")){
+  //   map.classList.remove("toggle-hide-content")
+  // }else{
+  //   map.classList.add("toggle-hide-content")
+  // }
+
+  // if(chefFlexContainer.classList.contains("toggle-flex")){
+  //   chefFlexContainer.classList.remove("toggle-flex")
+  // }else{
+  //   chefFlexContainer.classList.add("toggle-flex")
+  // }
+  gridContainer.classList.toggle("toggle-single-column")
+  gridContainer.classList.toggle("toggle-half-width")
+  map.classList.toggle("toggle-hide-content")
+  chefFlexContainer.classList.toggle("toggle-flex")
+  icon.classList.toggle("toggle-hide-content")
+  gridIcon.classList.toggle("toggle-hide-content")
+  
+  
+  
   console.log("clicked")
-  gridContainer.style.gridTemplateColumns = "1fr"
-  gridContainer.style.width = '50%'
-  map.style.display = "block"
-  chefFlexContainer.style.display = "flex"
-})
+}
+
+icon.addEventListener('click', insertMap)
+gridIcon.addEventListener('click', insertMap)
+
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
