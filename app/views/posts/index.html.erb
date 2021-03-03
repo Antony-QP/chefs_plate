@@ -1,1 +1,6 @@
 Index page posts
+<% @posts.each do |post| %>
+<%= cl_image_tag post.photo.key, height: 100, width: 100, crop: :fill %>
+<p><%= post.description %></p>
+<p>Posted at: <%= post.created_at %></p>
+<% end  %> 
