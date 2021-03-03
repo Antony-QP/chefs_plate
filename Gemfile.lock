@@ -268,11 +268,8 @@ DEPENDENCIES
   dotenv-rails
   faker
   font-awesome-sass
-
   geocoder
-
   gravatar_image_tag
-
   jbuilder (~> 2.7)
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)
@@ -295,4 +292,4 @@ RUBY VERSION
    ruby 2.6.6p146
 
 BUNDLED WITH
-   2.1.4
+   2.2.11

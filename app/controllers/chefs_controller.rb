@@ -8,7 +8,7 @@ class ChefsController < ApplicationController
               lat: restaurant.latitude,
               lng: restaurant.longitude,
               infoWindow: render_to_string(partial: "info_window", locals: { restaurant: restaurant }),
-              image_url: helpers.asset_url('pink_paws.png')
+              image_url: helpers.asset_url('chef-icon.png')
             }
           end
     end
