@@ -82,6 +82,8 @@ ActiveRecord::Schema.define(version: 2021_03_02_145624) do
     t.string "location"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.float "latitude"
+    t.float "longitude"
   end
 
   create_table "users", force: :cascade do |t|

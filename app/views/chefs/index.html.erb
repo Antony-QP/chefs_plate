@@ -1,3 +1,4 @@
+
 <div class="w-50">
   <% @chefs.each do |chef| %>
   <div class="chef-card mb-2">
@@ -19,3 +20,10 @@
   </div>
   <% end %>
 </div>
+
+<div id="map"
+     style="width: 50%; height: 100vh; position:sticky;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
+
