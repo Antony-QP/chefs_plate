@@ -11,7 +11,6 @@
   width: 40px;
 }
 
-
 .container-home-daan {
     list-style-type: none;
     display: flex;
@@ -32,7 +31,7 @@
 }
 
 .home-navbar-menu a:hover{
-  color: $primary
+  color: $primary;
 }
 
 .home-owner {
@@ -42,7 +41,7 @@
 
 .home-icon {
     display: flex;
-    color: #FFB703;
+    color: $primary;
     margin-left: 10px;
     font-weight: bold;
 }
@@ -71,19 +70,22 @@
   background-color: white;
   height: 42px;
   width: 85px;
-  border: #FFB703 1px solid;
+  border: $primary 1px solid;
   border-radius: 25px;
   margin-bottom: 5px;
 }
 
 .fas.fa-bars {
-  color: #FFB703;
+  color: $primary;
   margin-top: 5px;
   margin-left: -3px;
 }
 
 .fas.fa-bars:hover {
-  color: #ffcd03;
+  color: #433D3C;
 }
 
-
+.navbar-toggler {
+  padding: 1px;
+  margin-left: 8px;
+}

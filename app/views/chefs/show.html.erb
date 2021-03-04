@@ -1,32 +1,37 @@
 
-
 <div class="container-show-text">
-      <h4 class="header-text"><medium> Christianne Turner </medium></h4>
-      <h6 class="sub-header-text">The Wolesley - London </h6>
+    <h4 class="header-text"><medium><%= @chef.first_name %> <%= @chef.last_name %></medium></h4>
+    <h6 class="sub-header-text"><%= @chef.restaurant.name %> - <%= @chef.restaurant.location %> </h6>
 </div>
 
 <div class="d-flex justify-content-center">
-  <div class="container-show-img">
-    <%= image_tag("chef-show1.jpeg", class: "chef-show-img") %>
-    <%= image_tag("chef-show2.jpeg", class: "chef-show-img") %>
-    <%= image_tag("chef-show3.jpeg", class: "chef-show-img") %>
-  </div>
+    <div
+      class="chef-show-img"
+      style="background-image: url('<%= cl_image_path(@chef.menus[0].photos[0].key, crop: :fill )%>')">
+    </div>
+    <div
+      class="chef-show-img"
+      style="background-image: url('<%= cl_image_path(@chef.menus[0].photos[1].key, crop: :fill )%>')">
+    </div>
 </div>
+
 <div class="spacing-show">
 </div>
 
 <div class="container-show-story">
   <div class="d-flex justify-content-center">
     <div>
-        <%= image_tag("chef-show4.jpeg", class: "chef-show-img-profile") %>
-      <div class=below-chef-img>
-        <a href="#">
-        <i class="fab fa-fw fa-instagram"></i>
-        </a>
-        <a href="#">
-        <i class="fab fa-pinterest"></i>
-        </a>
-        <small>1.7k Chef's plate followers</small>
+      <div class="chef-show-img-profile"
+          style="background-image: url('<%= cl_image_path(@chef.photos[0].key, crop: :fill )%>')">
+      </div>
+        <div class=below-chef-img>
+          <a href="#">
+            <i class="fab fa-fw fa-instagram"></i>
+          </a>
+            <a href="#">
+            <i class="fab fa-pinterest"></i>
+          </a>
+            <small>1.7k Chef's plate followers</small>
       </div>
     </div>
   <p class="story-text">
@@ -39,12 +44,9 @@
     My favourite ingredients these days consists of wild scottish salmon, hard to find the good quality these days.  I love forraged ingredients and our supplier picks qild samphire and oyster mushrooms from down in Cornwall, the location being a closely guarded secret!
   </p>
     <div>
-      <div class="book-table">
-        [Insert chefs hats]
-        <div class="btn-book">
-        <%= link_to "Book table" %>
-        </div>
-      </div>
+
+      <%= link_to "Book table", "", class: "book-table" %>
+
       <div class="chef-insight">
         <p><strong> Chef's plate insight </strong></p>
         <p> Our pasta chef has a acquired a rare italian flower we are using with our lobster ravioli.</p>
@@ -53,7 +55,23 @@
   </div>
 
   <div class="chef-name-signature">
-    <p><medium> Christianne Turner </medium></p>
+    <%= @chef.first_name %> <%= @chef.last_name %>
   </div>
+</div>
 
+<div class="container-last-part">
+  <div class="d-flex justify-content-between">
+    <div class="post-menu">
+      <div> Chef's posts </div>
+      <div> <%= @chef.restaurant.name %> menu </div>
+    </div>
+    <div class="restaurant-info">
+      <div><strong>Restaurant Information</strong></div>
+      <div> +31 2 83 93 84 67 </div>
+      <div> www.thewolesley.com </div>
+      <div> opening hours </div>
+    </div>
+    <div class="little-map">
+    </div>
+  </div>
 </div>
