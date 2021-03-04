@@ -3,12 +3,13 @@
   <div class="homepage-banner align-items-end">
     <div class='home-banner-details'>
       <h1 class="banner-title">Connect with the most <br> inspirational chefs of today</h1>
-        <div id="form">
-            <input class="form-control-for-hp w-100 fs-1" type="search" placeholder="Search location...">
-          <div class="icon-search">
+      <!-- TODO (Olivia): Add search chef for now working with restaurants -->
+        <form action="/chefs" id="form">
+            <input name="location" class="form-control-for-hp w-100 fs-1" type="search" placeholder="Search restaurant by location...">
+          <button class="icon-search" type="submit">
             <a class="hp-search-button btn btn-info"><i class="fas fa-search"></i></a>
-          </div>
-        </div>
+          </button>
+        </form>
       <a class="btn btn-chefit" href="#">Chef it out!</a>
       <div class="arrow-hp">
         <i class="fas fa-chevron-down fa-3x arrow-hp"></i>
