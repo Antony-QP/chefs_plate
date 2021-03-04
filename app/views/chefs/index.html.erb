@@ -22,9 +22,11 @@
       <div class="chef-card mb-2 grid-item rounded">
         <div class="d-flex justify-content-between mb-1 border-bottom">
           <div class="">
-            <span class="font-weight-bold"
-              ><%= chef.first_name %> <%= chef.last_name %></span
+            <span class="font-weight-bold">
+            <%= link_to chef_path(chef) do %>
+              <%= chef.first_name %> <%= chef.last_name %></span
             >
+          <% end %>
             <div class=""><span><%= chef.restaurant.name %></span></div>
           </div>
           <div class="">
@@ -59,7 +61,7 @@
   </div>
 
   <!-- map -->
-  <div class="w-50 map-container position-sticky">
+  <div class="w-50 map-container position-sticky ml-2 toggle-hide-content">
     <div
       class="toggle-hide-content position-sticky "
       id="map"

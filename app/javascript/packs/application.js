@@ -33,6 +33,10 @@ const icon = document.querySelector('#map-toggle')
 const gridContainer = document.querySelector(".chef-card-grid-container")
 const chefFlexContainer = document.querySelector(".chef-flex-container")
 const gridIcon = document.querySelector("#grid-icon")
+const mapContainer = document.querySelector(".map-container")
+
+// Media Queries
+const iphone = window.matchMedia('(max-width: 400px)')
 
 
 const insertMap = () => {
@@ -59,14 +63,23 @@ const insertMap = () => {
   // }else{
   //   chefFlexContainer.classList.add("toggle-flex")
   // }
-  gridContainer.classList.toggle("toggle-single-column")
-  gridContainer.classList.toggle("toggle-half-width")
-  map.classList.toggle("toggle-hide-content")
-  chefFlexContainer.classList.toggle("toggle-flex")
-  icon.classList.toggle("toggle-hide-content")
-  gridIcon.classList.toggle("toggle-hide-content")
-  
-  
+
+  // if(iphone.matches){
+  //   map.classList.toggle("toggle-hide-content")
+  //   mapContainer.classList.toggle("toggle-hide-content")
+  //   mapContainer.classList.toggle("toggle-hide-content")
+  //   icon.classList.toggle("toggle-hide-content")
+  //   gridIcon.classList.toggle("toggle-hide-content")
+  // }else{
+    gridContainer.classList.toggle("toggle-single-column")
+    gridContainer.classList.toggle("toggle-half-width")
+    map.classList.toggle("toggle-hide-content")
+    mapContainer.classList.toggle("toggle-hide-content")
+    chefFlexContainer.classList.toggle("toggle-flex")
+    icon.classList.toggle("toggle-hide-content")
+    gridIcon.classList.toggle("toggle-hide-content")
+  // }
+
   
   console.log("clicked")
 }

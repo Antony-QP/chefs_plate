@@ -46,3 +46,9 @@
     align-self: flex-start;
     top: 0;
 }
+
+@media only screen and (max-width: 400px) {
+    .chef-card-grid-container{
+        grid-template-columns: 1fr;
+  }
+}
