@@ -1,0 +1,50 @@
+.menu-container{
+    height: 80vh;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    margin-bottom: 20px;
+}
+
+.left-hand-column,
+.left-hand-column{
+    height: 80vh;
+}
+
+.menu-card{
+    height: 80vh
+}
+
+.menu-image-main{
+    width: 60%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+}
+
+.menu-image-menu{
+    width: 80%;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto; 
+}
+
+.chefs-note{
+    font-size: 10px;
+}
+
+.grid-container-menu{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.chef-image-menu{
+    width: 80%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.link-container-menu{
+    width: 80%
+}
