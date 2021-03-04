@@ -39,13 +39,13 @@
                 <div class="col-sm text-center bg-success">
                     <div class="menu-image-main rounded mt-3" style="background-image: url('<%= cl_image_path @menu.photos[0].key, crop: :fill %>');"></div>
                     <div class="mb-3 mt-3">
-                        <%= @menu.title %>
+                        <span class="text-info"><%= @menu.title %></span>
                     </div>
                     <div class="border-bottom mb-3">
                     </div>
                     
                     <div class="container">
-                        <p class="chefs-note"><%= @menu.chefs_note %></p>
+                        <p class="chefs-note text-info"><%= @menu.chefs_note %></p>
                     </div>
                     <div class="border-top">
                         <span><%= @menu.chef.first_name %> <%= @menu.chef.last_name %></span>
