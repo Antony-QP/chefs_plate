@@ -1,0 +1,46 @@
+.post-card {
+    margin: 20px;
+    width: 80%;
+    height: 30vh;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.post-card-desription {
+    width: 60%;
+}
+
+.post-card-image {
+    width: 25%;
+    height: 130px;
+    background-size: cover;
+    background-position: center;
+    margin: 10px;
+}
+
+.post-card-posted {
+    width: 15%;
+}
+
+#chef-profile-picture {
+    height: 50vh;
+    border-radius: 20px;
+    margin-left: 15px;
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+// .post-card-img{
+//     width: 33%;
+//     height: 130px;
+//     background-size: cover;
+//     background-position: center;
+//     margin-right: 5px;
+// }
+
+// .post-card-img-container{
+//     display: flex
+// }
+
+// .post-card i:hover{
+//     font-size: 20px;
+// }
