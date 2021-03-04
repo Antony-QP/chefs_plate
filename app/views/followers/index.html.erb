@@ -1,0 +1,39 @@
+<h1>Welcome back <%= current_user.email.split('@')[0].capitalize %><span class="text-primary">...</span></h1>
+<div class="container">
+    <div class="dashboard-grid-container p-5">
+        <div class="icon-column">
+            <div class="">
+                <i class="fas fa-info-circle display-4 text-info"></i>
+            </div>
+           <div class="">
+            <i class="fas fa-heart display-4 mt-5 text-info"></i>
+           </div>
+            <div class="">
+                <i class="far fa-calendar-alt display-4 mt-5 text-info"></i>
+            </div>
+        </div>
+        <div class="following-chef-grid">
+            <% @followers.each do |follower| %>
+            <% if follower.user_id == current_user.id  %>
+            <div class="">
+                <div class="d-flex mt-2 mr-2">
+                    <div
+                    class="chef-card-img rounded"
+                    style="
+                      background-image: url('<%= cl_image_path follower.chef.photos[0].key, crop: :fill %>');
+                    "
+                  ></div>
+                  <div class="">
+                      <%= link_to chef_path (follower.chef) do %>
+                      <span class="font-weight-bold border-bottom chef-full-name"><%= follower.chef.first_name %> <%= follower.chef.last_name %></span>
+                    <% end %>
+                    <span class="chef-restaurant"><%= follower.chef.restaurant.name %></span>
+                  </div>
+                </div>
+            </div>
+            <% end  %>
+            <% end  %>
+        </div>
+    </div>
+</div>
+
