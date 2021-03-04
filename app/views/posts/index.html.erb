@@ -1,17 +1,24 @@
 <div class="container-post-card d-flex">
-  
-    
-    <div id="chef-profile-picture" class="chef-card-img rounded" style="background-image: url('<%= cl_image_path @chef.photos[0].key, crop: :fill %>')"></div>
-    <%# <%= link_to "The Restaurants Menu",   %> 
+
+    <div class="post-links">
+      <div id="chef-profile-picture" class="chef-card-img rounded" style="background-image: url('<%= cl_image_path @chef.photos[0].key, crop: :fill %>')"></div>
+      
+      <div class=""><%= link_to "The Chefs Menu", chef_menus_path %></div>
+    </div> 
+      
     <div class="container-post-card-items">
       <% @posts.each do |post| %>
+        <% if post.chef_id == @chef.id %>
         <div class="post-card">
-          <div class="post-card-image" style="background-image: url('<%= cl_image_path post.photo.key, crop: :fill %>')"></div>
-          <div class="post-card-date-description">
-            <div class="post-card-posted"><p> <%= post.created_at.to_date %></p></div>
-            <div class="post-card-desription"><strong><p><%= post.description %></p></strong></div>
+            <div class="post-card-image" style="background-image: url('<%= cl_image_path post.photo.key, crop: :fill %>')"></div>
+            <div class="post-card-date-description">
+              <div class="post-card-posted"><p> <%= post.created_at.to_date %></p></div>
+              <div class="post-card-description">
+                <strong><p><%= post.description %></p></strong>
+              </div>
+            </div>
           </div>
-        </div>
+        <% end %>
       <% end  %> 
     </div>
 </div>
