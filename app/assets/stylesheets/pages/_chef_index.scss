@@ -14,11 +14,41 @@
 }
 
 .sub-nav .map-marker-icon .fa-map-marked-alt{
-    font-size: 20px;
+    font-size: 30px;
 }
 
+.sub-nav .map-marker-icon .fa-th{
+    font-size: 30px;
+}
 
-
-#map{
+.toggle-hide-content{
     display: none;
+}
+
+.toggle-single-column{
+    grid-template-columns: 1fr;
+}
+
+.toggle-half-width{
+    width: 50%;
+}
+
+.toggle-display-block{
+    display: block;
+}
+
+.toggle-flex{
+    display: flex
+}
+
+.map-container{
+    height: 100vh;
+    align-self: flex-start;
+    top: 0;
+}
+
+@media only screen and (max-width: 400px) {
+    .chef-card-grid-container{
+        grid-template-columns: 1fr;
+  }
 }

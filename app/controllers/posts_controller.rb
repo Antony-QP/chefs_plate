@@ -2,6 +2,7 @@ class PostsController < ApplicationController
 
     def index
         @posts = Post.all
+        @chef = Chef.find(params[:chef_id])
     end
 
     def create
