@@ -1,1 +1,72 @@
-Index page chefs
+<!-- subnav -->
+<div class="sub-nav d-flex justify-content-between">
+  <div class="d-flex justify-content-start pl-2 pr-2 mt-1">
+    <%= form_tag chefs_path, method: :get do %>
+    <%= text_field_tag :query,
+     params[:query],
+    class: "form-control",
+    placeholder: "Filter Chefs"
+    %>
+   <% end %>
+  </div>
+  <div class="map-marker-icon p-2"><i class="fas fa-map-marked-alt text-info" id="map-toggle"></i></div>
+</div>
+<div class="border-bottom w-100"></div>
+
+<div class="">
+
+<!-- chef grid -->
+<div class="p-2 mt-3 chef-flex-container">
+  <div class="chef-card-grid-container">
+      <% @chefs.each do |chef| %>
+      <div class="chef-card mb-2 grid-item rounded">
+        <div class="d-flex justify-content-between mb-1 border-bottom">
+          <div class="">
+            <span class="font-weight-bold"
+              ><%= chef.first_name %> <%= chef.last_name %></span
+            >
+            <div class=""><span><%= chef.restaurant.name %></span></div>
+          </div>
+          <div class="">
+            <a href="#"><i class="far fa-heart text-primary"></i></a>
+          </div>
+        </div>
+        <div class="">
+          <i class="fas fa-map-marker-alt text-primary mr-2"></i><span class="location-name"><%= chef.restaurant.location %></span>
+        </div>
+        <div class="chef-card-img-container">
+          <div
+            class="chef-card-img rounded"
+            style="
+              background-image: url('<%= cl_image_path chef.photos[0].key, crop: :fill %>');
+            "
+          ></div>
+          <div
+            class="chef-card-img rounded"
+            style="
+              background-image: url('<%= cl_image_path chef.menus[0].photos[0].key, crop: :fill %>');
+            "
+          ></div>
+          <div
+            class="chef-card-img rounded"
+            style="
+              background-image: url('<%= cl_image_path chef.menus[0].photos[1].key, crop: :fill %>');
+            "
+          ></div>
+        </div>
+      </div>
+      <% end %>
+  </div>
+
+  <!-- map -->
+  <div class="w-50 ">
+    <div
+      class="position-sticky"
+      id="map"
+      style="width: 100%; height: 100vh;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
+    </div>
+  </div>
+</div>

@@ -24,11 +24,25 @@ require("channels")
 
 // External imports
 import "bootstrap";
+import { initMapbox } from '../plugins/init_mapbox';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
+const map = document.getElementById("map")
+const icon = document.querySelector('#map-toggle')
+const gridContainer = document.querySelector(".chef-card-grid-container")
+const chefFlexContainer = document.querySelector(".chef-flex-container")
+
+icon.addEventListener('click', () => {
+  console.log("clicked")
+  gridContainer.style.gridTemplateColumns = "1fr"
+  gridContainer.style.width = '50%'
+  map.style.display = "block"
+  chefFlexContainer.style.display = "flex"
+})
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  initMapbox();
 });

@@ -1,0 +1,24 @@
+.grid-container{
+    display:grid
+}
+
+.chef-card-grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 15px;
+}
+
+.sub-nav{
+    height: 40px;
+    width: 100%;
+}
+
+.sub-nav .map-marker-icon .fa-map-marked-alt{
+    font-size: 20px;
+}
+
+
+
+#map{
+    display: none;
+}
