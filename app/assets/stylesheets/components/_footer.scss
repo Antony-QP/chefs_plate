@@ -2,7 +2,7 @@
   justify-content: space-between;
   align-items: flex-end;
   border-top: 1px solid #dddddd;
-  padding: 20px 40px;
+  padding: 10px 20px;
   display: flex;
   margin: 0px 0px;
   font-size: 18px;
@@ -14,11 +14,12 @@
 
 .footer a {
   font-size: 15px;
-  color: #FFB703;
+  color: $primary;
 }
 
 .text-footer {
-  margin-top: 7px;
+  padding-top: 12px;
+  color: $primary;
 }
 
 .links {
@@ -50,7 +51,7 @@ body {
 
 .main-container {
   min-height: 100vh; /* will cover the 100% of viewport */
-  overflow: hidden;
+  // overflow: hidden;
   display: block;
   position: relative;
   padding-bottom: 80px; /* height of your footer */
