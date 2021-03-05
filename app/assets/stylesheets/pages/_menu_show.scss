@@ -1,21 +1,25 @@
 .menu-container{
-    height: 80vh;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    height: 70vh;
     margin-bottom: 20px;
+    padding: 0 20px;
 }
 
 .left-hand-column,
 .left-hand-column{
-    height: 80vh;
+    height: 60vh;
 }
 
 .menu-card{
-    height: 80vh
+    height: 60vh
+}
+
+.row-chef-menu{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .menu-image-main{
     width: 60%;
-    height: 200px;
+    height: 150px;
     background-size: cover;
     background-position: center;
     margin: 0 auto;
@@ -23,7 +27,7 @@
 
 .menu-image-menu{
     width: 80%;
-    height: 80vh;
+    height: 60vh;
     background-size: cover;
     background-position: center;
     margin: 0 auto; 
