@@ -4,16 +4,8 @@
   height: 87vh;
   width: 100%;
   background-size: cover;
-  background-position: right bottom;
-  background-image: url("https://images.pexels.com/photos/3298637/pexels-photo-3298637.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-}
-
-.home-banner-details {
+  background-image: linear-gradient(rgba(255, 183, 4, 0.3), rgba(0,0,0,0.3)), url("https://images.pexels.com/photos/3298637/pexels-photo-3298637.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   display: flex;
-  flex-direction: column;
-  padding-top: 100px;
-  padding-bottom: 40px;
-  align-items: center;
   justify-content: center;
 }
 
@@ -21,11 +13,16 @@
   padding-bottom: 50px;
 }
 
+.home-banner-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .banner-title {
   color: white;
   font-size: 62px;
-  padding-bottom: 80px;
-  padding-left: 60px;
 }
 
 .search-bar-input {
@@ -38,21 +35,44 @@
   justify-content: space-between;
   width: 500px;
   padding: 40px;
+  position: relative;
 }
 
-.form-control {
-  border-radius: 16px;
+.form-control-for-hp {
+  border-radius: 50px;
   height: 60px;
+  font-size: 20px;
+}
+
+.icon-search a {
+  background-color: rgb(250, 183, 6);
+  border-radius: 50px;
+  border: #FFB703;
+}
+
+.icon-search {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
 }
 
 .btn-chefit {
   color: black;
-  padding: 12px 28px;
+  padding: 8px 24px;
   border-radius: 16px;
   background: #FFB703;
   transition: background 0.3s ease;
-  font-size: 24px;
+  font-size: 20px;
 }
+
+.arrow-hp {
+  color: black;
+}
+
+
+
+
+
 
 .homepage-container {
   margin: 120px 200px 0px 200px;
@@ -60,13 +80,16 @@
 }
 
 .h2-hp {
-  font-size: 48px;
+  font-size: 38px;
 }
 
 .homepage-cards {
   display: flex;
   margin-bottom: 120px;
-  justify-content: space-between;
+}
+
+.homepage-card {
+  margin-right: 10px;
 }
 
 .homepage-card-image {
@@ -78,36 +101,10 @@
   border-radius: 16px;
 }
 
-.call-to-action-container {
-  margin: 120px 200px 0px 200px;
-  padding-left: 30px;
-}
-
-.call-to-action-card {
-  display: flex;
-  padding-bottom: 30px;
-}
-
-.call-to-action-image {
-  width: 40%;
-  height: 400px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 16px;
-}
-
-.call-to-action-text {
-  flex-grow: 1;
-  background-color: rgb(244, 244, 244);
-}
-
-.call-to-action-text p {
-  font-size: 32px;
-  padding: 70px 0;
-}
-
-.align-text-right {
-  text-align: right;
+.text-call-actopm-cards {
+  text-align: left;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .chef-yellow {
@@ -117,4 +114,13 @@
 .chef-names {
   font-size: 20px;
   font-weight: bold;
+}
+
+.call-actions-cards-fit img {
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.chef-cards-fonts {
+  font-size: 50px;
 }
