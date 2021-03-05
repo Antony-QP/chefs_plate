@@ -1,7 +1,7 @@
 .post-card {
     margin: 20px;
-    width: 90%;
-    height: 30vh;
+    width: 70%;
+    height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,6 +12,10 @@
 .post-card-description {
     padding-right: 15px;
     font-size: large;
+}
+
+.post-card-description p {
+    font-size: larger;
 }
 
 .post-links {
@@ -28,17 +32,17 @@
 
 .post-card-image {
     width: 30%;
-    height: 96%;
+    height: 100%;
     background-size: cover;
     background-position: center;
-    margin: 5px 30px 5px 5px;
-    border-radius: 12px;
+    margin: 5px 30px 5px 0;
+    border-radius: 12px 0 0 12px;
 }
 
 .post-card-posted {
     text-align: right;
     padding-right: 25px;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
 }
 
 .container-post-card-items {
@@ -61,5 +65,5 @@
 
     padding-top: 40px;
     width: fit-content;
-    // color: #433e3d;
+    
 }
