@@ -1,5 +1,58 @@
-Index page menu
+<div class="container">
+  <div class="grid-container-menu">
+    <div class="mt-3">
+      <div
+        class="chef-image-menu rounded"
+        style="
+          background-image: url('<%= cl_image_path @chef.photos[0].key, crop: :fill %>');
+        "
+      ></div>
+      <p class="font-weight-bold text-info">
+        <%= @chef.first_name %> <%= @chef.last_name %>
+      </p>
+      <div class="link-container-menu">
+        <div class="border-top d-flex justify-content-between">
+          <div class="">
+            <%= link_to chef_posts_path(@chef) do %>
+            <span class="text-info">Chef's Posts</span>
+          </div>
+          <div class="">
+            <i class="fas fa-chevron-right"></i>
+          </div>
+          <% end %>
+        </div>
+        <div class="border-top d-flex justify-content-between">
+          <div class="">
+            <%= link_to chef_path(@chef) do %>
+            <span class="text-info">Chef profile</span>
+          </div>
+          <div class="">
+            <i class="fas fa-chevron-right"></i>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
 
-<% if current_user.avatar.attached? %>
-<%= image_tag(current_user.avatar) %>
-<% end %>
+    <div class="following-chef-grid mt-2">
+      <% @chef.menus.each do |menu| %>
+      <div class="menu-index-card">
+        <div class="mt-2 mr-2">
+          <div
+            class="menu-thumbnail rounded"
+            style="
+              background-image: url('<%= cl_image_path menu.photos[0].key, crop: :fill %>');
+            "
+          ></div>
+          <div class="">
+            <span class="font-weight-bold border-bottom chef-full-name"
+              ><%= menu.title %> <%= menu.cuisine %></span
+            >
+            <span class="chef-restaurant"><%= menu.price %>€</span>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
