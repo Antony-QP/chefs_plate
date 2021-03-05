@@ -2,8 +2,12 @@
 
     <div class="post-links">
       <div id="chef-profile-picture" class="chef-card-img rounded" style="background-image: url('<%= cl_image_path @chef.photos[0].key, crop: :fill %>')"></div>
-      
-      <div class=""><%= link_to "The Chefs Menu", chef_menus_path %></div>
+      <div class="post-menu-links">
+        <div id='posts-links' class="chef1"> <%= link_to "Chef's posts", chef_menus_path(@chef) %></div>
+        <div id='posts-links' class="chef2"> <%= link_to @chef.restaurant.name, chef_menus_path  %></div>
+      </div>
+
+     
     </div> 
       
     <div class="container-post-card-items">
@@ -14,7 +18,7 @@
             <div class="post-card-date-description">
               <div class="post-card-posted"><p> <%= post.created_at.to_date %></p></div>
               <div class="post-card-description">
-                <strong><p><%= post.description %></p></strong>
+                <p><%= post.description %></p>
               </div>
             </div>
           </div>
