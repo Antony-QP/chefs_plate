@@ -1,4 +1,8 @@
 
+.chef-profile-grid{
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+}
 .header-text {
   font-family: 'Parisienne', cursive;
   font-size: 36px;
@@ -58,18 +62,19 @@
 }
 
 .book-table {
-  margin-left: 100px;
-  margin-right: 40px;
-  margin-bottom: 45px;
-  margin-top: 10px;
-  width: 125px;
-  background-color: $primary;
-  font-size: 16px;
-  text-color: white !important;
-  border-radius: 15px;
-  transition: background 0.3s ease;
-  padding: 14px 28px 14px 28px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+
+  margin: 0 auto;
+  // margin-left: 100px;
+  // margin-right: 40px;
+  // margin-bottom: 45px;
+  // margin-top: 10px;
+  // width: 125px;
+  // background-color: $primary;
+  // font-size: 16px;
+  // border-radius: 15px;
+  // transition: background 0.3s ease;
+  // padding: 14px 28px 14px 28px;
+  // box-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
 .chef-insight {
@@ -92,11 +97,9 @@
 .chef-name-signature {
   font-family: 'Parisienne', cursive;
   font-size: 26px;
-  margin-left: 920px;
 }
 
 .container-last-part {
-  margin-top: 20px;
 }
 
 .post-menu {
@@ -123,7 +126,14 @@
   border-bottom: 1px solid lightgrey;
   font-weight: bold;
   font-family: 'Roboto';
+  text-decoration: none;
 }
+
+.chef1 i,
+.chef2 i{
+  font-size: 15px;
+}
+
 
 .chef3 {
   padding: 10px;
@@ -155,7 +165,6 @@
 }
 
 .restaurant-info {
-  margin-left: 280px;
   font-family: 'Roboto';
   font-size: 16px;
   font-weight: bold;
@@ -165,7 +174,6 @@
   background-color: green;
   width: 300px;
   height: 190px;
-  margin-right: 320px;
   border-radius: 15px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }

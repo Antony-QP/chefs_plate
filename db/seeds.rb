@@ -10,7 +10,7 @@ User.destroy_all
 Restaurant.destroy_all
 
 puts "Creating users"
-user_1 = User.create!(email: "anthony@gmail.com", password: "123456")
+user_1 = User.create!(email: "antony@gmail.com", password: "123456")
 user_2 = User.create!(email: "billy@gmail.com", password: "123456")
 user_3 = User.create!(email: "andy@gmail.com", password: "123456")
 user_4 = User.create!(email: "james@gmail.com", password: "123456")
@@ -25,19 +25,19 @@ user_10 = User.create!(email: "sarah@gmail.com", password: "123456")
 puts "Creating restaurants"
 restaurant_1 = Restaurant.create!({
     name: Faker::Restaurant.name,
-    location: "Abeelstraat 83"
+    location: "Abeelstraat 83, The Netherlands"
 })
 restaurant_2 = Restaurant.create!({
     name: Faker::Restaurant.name,
-    location: "Joh. Vermeerstraat 66"
+    location: "Joh. Vermeerstraat 66, The Netherlands"
 })
 restaurant_3 = Restaurant.create!({
     name: Faker::Restaurant.name,
-    location: "De Keverbergstraat 5"
+    location: "De Keverbergstraat 5, The Netherlands"
 })
 restaurant_4 = Restaurant.create!({
     name: Faker::Restaurant.name,
-    location: "Wibautstraat 276"
+    location: "Wibautstraat 276, The Netherlands"
 })
 restaurant_5 = Restaurant.create!({
     name: Faker::Restaurant.name,
@@ -45,34 +45,34 @@ restaurant_5 = Restaurant.create!({
 })
 restaurant_6 = Restaurant.create!({
     name: Faker::Restaurant.name,
-    location: "Van der Waalsstraat 173"
+    location: "Van der Waalsstraat 173, The Netherlands"
 })
 restaurant_7 = Restaurant.create!({
     name: Faker::Restaurant.name,
-    location: "Bos en Lommerweg 113"
+    location: "Bos en Lommerweg 113, The Netherlands"
 })
 restaurant_8 = Restaurant.create!({
     name: Faker::Restaurant.name,
-    location: "Lurvinksteeg 194"
+    location: "Lurvinksteeg 194, The Netherlands"
 })
 restaurant_9 = Restaurant.create!({
     name: Faker::Restaurant.name,
-    location: "Sportlaan 40"
+    location: "Sportlaan 40, The Netherlands"
 })
 restaurant_10 = Restaurant.create!({
     name: Faker::Restaurant.name,
-    location: "Anna Maria Geertruida Schmidtlaan 114"
+    location: "Anna Maria Geertruida Schmidtlaan 114, The Netherlands"
 })
 
 puts "Creating chefs"
 chef_1_picture = URI.open('https://i.pinimg.com/474x/b8/39/6a/b8396ae14a3b9cb506668dabdd462cfd.jpg')
 chef_1 = Chef.new({
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
+    first_name: "Martin",
+    last_name: "Johnson",
     email: Faker::Internet.email,
-    inspiration: Faker::Lorem.sentence(word_count: 20),
-    work_history: Faker::Lorem.sentence(word_count: 20),
-    mission: Faker::Lorem.sentence(word_count: 20),
+    inspiration: "I draw my inspiration from the time I spent living and working in kitchens in Madrid, Spain.  I used to live near the sea and developed strong relationships with the local fisherman there and I became obessed with cooking great seafood.  I bring this influence from the sea and combine it with creative nature of Spanish cooking to create original and exiciting cuisine",
+    work_history: "I have worked at the Grand Hyatt and Regency in Barcelona before moving to current job as head chef where I work now",
+    mission: "My mission is to bring excitement and originalty into my cooking in a sustainable way.  I focus on ingredients like shell-fish and organic vegetables to cook in the most sustainable way possible",
     restaurant_id: restaurant_1.id
 })
 chef_1.photos.attach(io: chef_1_picture, filename: 'chef_1.png', content_type: 'image/png')
@@ -359,14 +359,14 @@ post_20.save!
 
 puts "Creating Menus"
 
-menu_1_picture_1 = URI.open('https://images.unsplash.com/photo-1455279032140-49a4bf46f343?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDd8fGNoZWYlMjBjb29raW5nfGVufDB8fDB8&auto=format&fit=crop&w=800&q=60')
+menu_1_picture_1 = URI.open('https://images.unsplash.com/photo-1553174798-75cbea6e758e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OHx8ZnJlc2glMjBjcmFifGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 menu_1_picture_2 = URI.open('https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudCUyMHBsYXRlfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
-paper_menu_picture_1 = URI.open('https://i.pinimg.com/474x/1a/7d/ff/1a7dff3813150a4080eab22cef01ffba.jpg')
+paper_menu_picture_1 = URI.open('https://i.pinimg.com/originals/15/f6/19/15f61972261c3ea32b1339dae2234bbd.png')
 menu_1 = Menu.new({
-    title: "5 course spring menu",
-    chefs_note: Faker::Lorem.sentence(word_count: 20),
+    title: "Summer Fish Tasting Menu",
+    chefs_note: Faker::Lorem.sentence(word_count: 100),
     price: Faker::Number.decimal(l_digits: 2),
-    cuisine: "French",
+    cuisine: "Spanish",
     chef_id: chef_1.id
 })
 menu_1.photos.attach(io: menu_1_picture_1, filename: 'menu_1.png', content_type: 'image/png')
@@ -716,3 +716,53 @@ follower_10 = Follower.create!({
     chef_id: chef_10.id,
     user_id: user_10.id
 })
+
+# Chef 1 followers
+
+follower_11 = Follower.create!({
+    chef_id: chef_1.id,
+    user_id: user_2.id
+})
+
+follower_12 = Follower.create!({
+    chef_id: chef_1.id,
+    user_id: user_3.id
+})
+
+follower_13 = Follower.create!({
+    chef_id: chef_1.id,
+    user_id: user_4.id
+})
+
+follower_1 = Follower.create!({
+    chef_id: chef_1.id,
+    user_id: user_5.id
+})
+
+# User 1 following
+
+follower_1 = Follower.create!({
+    chef_id: chef_2.id,
+    user_id: user_1.id
+})
+
+follower_1 = Follower.create!({
+    chef_id: chef_3.id,
+    user_id: user_1.id
+})
+
+follower_1 = Follower.create!({
+    chef_id: chef_4.id,
+    user_id: user_1.id
+})
+
+follower_1 = Follower.create!({
+    chef_id: chef_5.id,
+    user_id: user_1.id
+})
+
+follower_1 = Follower.create!({
+    chef_id: chef_6.id,
+    user_id: user_1.id
+})
+
