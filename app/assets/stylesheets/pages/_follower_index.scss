@@ -1,4 +1,4 @@
-.dashboard-grid-container{
+.dashboard-grid-container {
     display: grid;
     grid-template-columns: 1fr 3fr;
 }
@@ -8,16 +8,20 @@
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.chef-full-name{
+.chef-full-name {
     font-size: 12px;
     display: block;
     color: black;
 }
 
-.chef-restaurant{
+.chef-restaurant {
     font-size: 12px;
 }
 
-
-
-
+.follower-image {
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 5px;
+}

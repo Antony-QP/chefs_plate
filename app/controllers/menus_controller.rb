@@ -6,7 +6,6 @@ class MenusController < ApplicationController
     end
 
     def show
-        @chef = Chef.find(params[:chef_id])
         @menu = Menu.find(params[:id])
     end
 
