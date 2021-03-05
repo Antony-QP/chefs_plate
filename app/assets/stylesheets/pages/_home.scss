@@ -54,6 +54,8 @@
   position: absolute;
   right: 50px;
   bottom: 50px;
+  border: none;
+  background: white;
 }
 
 .btn-chefit {
@@ -69,8 +71,22 @@
   color: black;
 }
 
+.hp-link-to-customize a {
+  text-decoration: none;
+}
 
+input:focus {
+    outline: none;
+    background: white;
+}
 
+input {
+  background: white;
+}
+
+input[type=text]:active, input[type=text]:focus {
+  background-color: green;
+}
 
 
 
@@ -86,6 +102,11 @@
 .homepage-cards {
   display: flex;
   margin-bottom: 120px;
+}
+
+.hp-card-title {
+  text-decoration: none;
+  color: black;
 }
 
 .homepage-card {
@@ -119,8 +140,4 @@
 .call-actions-cards-fit img {
   object-fit: cover;
   border-radius: 16px;
-}
-
-.chef-cards-fonts {
-  font-size: 50px;
 }
