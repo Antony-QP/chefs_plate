@@ -1,10 +1,10 @@
 <div class="container-post-card d-flex">
 
     <div class="post-links">
-      <div id="chef-profile-picture" class="chef-card-img rounded" style="background-image: url('<%= cl_image_path @chef.photos[0].key, crop: :fill %>')"></div>
+      <div id="chef-profile-picture" class="chef-card-img" style="background-image: url('<%= cl_image_path @chef.photos[0].key, crop: :fill %>')"></div>
       <div class="post-menu-links">
-        <div id='posts-links' class="chef1"> <%= link_to "Chef's posts", chef_menus_path(@chef) %></div>
-        <div id='posts-links' class="chef2"> <%= link_to @chef.restaurant.name, chef_menus_path  %></div>
+        <div id='posts-links' class="chef1"> <%= link_to "Chef's Menu", chef_menus_path(@chef) %></div>
+        <div id='posts-links' class="chef2"> <%= link_to "Chef's Profile", chef_path(@chef)  %></div>
       </div>
 
      
