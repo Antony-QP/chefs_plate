@@ -101,7 +101,7 @@ GEM
     ffi (1.14.2)
     font-awesome-sass (5.15.1)
       sassc (>= 1.11)
-    geocoder (1.6.6)
+    geocoder (1.6.5)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     gravatar_image_tag (1.2.0)
@@ -254,7 +254,7 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
-  x86_64-darwin-20
+  ruby
 
 DEPENDENCIES
   autoprefixer-rails
@@ -290,4 +290,4 @@ RUBY VERSION
    ruby 2.6.6p146
 
 BUNDLED WITH
-   2.2.11
+   1.17.2
