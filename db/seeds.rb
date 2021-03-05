@@ -197,26 +197,26 @@ chef_10.save!
 
 puts "Creating posts"
 
-post_1_picture = URI.open('https://images.unsplash.com/photo-1455279032140-49a4bf46f343?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDd8fGNoZWYlMjBjb29raW5nfGVufDB8fDB8&auto=format&fit=crop&w=800&q=60')
+post_1_picture = URI.open('https://images.unsplash.com/photo-1539740091271-0bd0502ebf06?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8bG9ic3RlcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 post_1 = Post.new({
-    description: Faker::Food.description,
+    description: "Fresh lobster in from the atlantic coast.  We are using whats left to make a truly outstanding consume to start off our fish tasting menu",
     chef_id: chef_1.id
 })
 post_1.photo.attach(io: post_1_picture, filename: 'post1.png', content_type: 'image/png')
 post_1.save!
 
-post_2_picture = URI.open('https://images.unsplash.com/photo-1601002177343-070d8f2d3496?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hlZiUyMGNvb2tpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+post_2_picture = URI.open('https://images.unsplash.com/photo-1606677661991-446cea8ee182?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8YmVlZnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 post_2 = Post.new({
-    description: Faker::Food.description, 
+    description: "we have been experimenting with our new in house smoker.  30 day old aged rib eyes have been in for 2 days and looking good!", 
     chef_id: chef_1.id
 })
 post_2.photo.attach(io: post_2_picture, filename: 'post2.png', content_type: 'image/png')
 post_2.save!
 
-post_3_picture = URI.open('https://images.unsplash.com/photo-1447279506476-3faec8071eee?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2hlZiUyMGNvb2tpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+post_3_picture = URI.open('https://images.unsplash.com/photo-1597771125516-4eddaf867446?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2251&q=80')
 post_3 = Post.new({
-    description: Faker::Food.description, 
-    chef_id: chef_2.id
+    description: "Our truffle dealer from Milan has been to visit us and brought us some of the most incredible black truffles.  We have been teaming  up with our pastry chef to create an outstading fresh pasta with black truffle dish", 
+    chef_id: chef_1.id
 })
 post_3.photo.attach(io: post_3_picture, filename: 'post3.png', content_type: 'image/png')
 post_3.save!
@@ -401,7 +401,7 @@ menu_3 = Menu.new({
     chefs_note: Faker::Lorem.sentence(word_count: 20),
     price: Faker::Number.decimal(l_digits: 2),
     cuisine: "French",
-    chef_id: chef_2.id
+    chef_id: chef_1.id
 })
 menu_3.photos.attach(io: menu_3_picture_1, filename: 'menu_3.png', content_type: 'image/png')
 menu_3.photos.attach(io: menu_3_picture_2, filename: 'menu_3_2.png', content_type: 'image/png')

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container overflow-hidden">
     <div class="grid-container-menu">
         <div class="mt-3">
             <div
@@ -34,7 +34,7 @@
         <div class="menu-container text-center justify-content-center mt-3 menu-row">
             <div class="row">
                 <div class="col-sm border-right bg-info">
-                    <div class="menu-image-menu rounded mt-3" style="background-image: url('<%= cl_image_path @menu.photos[2].key, crop: :fill %>');"></div>
+                    <div class="menu-image-menu rounded mt-3 mb-3" style="background-image: url('<%= cl_image_path @menu.photos[2].key, crop: :fill %>');"></div>
                 </div>
                 <div class="col-sm text-center bg-success">
                     <div class="menu-image-main rounded mt-3" style="background-image: url('<%= cl_image_path @menu.photos[0].key, crop: :fill %>');"></div>
@@ -45,7 +45,8 @@
                     </div>
                     
                     <div class="container">
-                        <p class="chefs-note text-info"><%= @menu.chefs_note %></p>
+                        <p class="chefs-note text-info overflow-scroll"><%= @menu.chefs_note %></p>
+                        <div class=""><span class="price-span"><%= @menu.price %>€</span></div>
                     </div>
                     <div class="border-top">
                         <span><%= @menu.chef.first_name %> <%= @menu.chef.last_name %></span>
