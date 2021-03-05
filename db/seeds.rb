@@ -10,7 +10,7 @@ User.destroy_all
 Restaurant.destroy_all
 
 puts "Creating users"
-user_1 = User.create!(email: "antony@gmail.com", password: "123456")
+user_1 = User.create!(email: "chuck@gmail.com", password: "123456")
 user_2 = User.create!(email: "billy@gmail.com", password: "123456")
 user_3 = User.create!(email: "andy@gmail.com", password: "123456")
 user_4 = User.create!(email: "james@gmail.com", password: "123456")
