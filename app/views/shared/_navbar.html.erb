@@ -8,12 +8,12 @@
     </div>
 
       <div class="nav-item dropdown">
-        <a class="navbar-toggler" role="button" data-toggle="collapse" data-target="#navbarBrowseButton">
+        <a class="navbar-toggler" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <span class="navbar-toggler-icon text-center">
             <i class="fas fa-bars"></i>
           </span>
         </a>
-         <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTE5NDg0MDU1MjQ5OTc4ODk1/chuck-norris-15720761-1-402.jpg"/>
+         <img class="avatar dropdown-toggle" src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTE5NDg0MDU1MjQ5OTc4ODk1/chuck-norris-15720761-1-402.jpg"/>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
           <% if current_user %>
           <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
