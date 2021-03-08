@@ -4,3 +4,12 @@
     background-size: cover;
     background-position: center;
 }
+
+#additional-padding-menus {
+  padding-top: 70px;
+}
+
+.menu-chef-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
