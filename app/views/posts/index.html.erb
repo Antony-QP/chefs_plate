@@ -30,7 +30,7 @@
             <div class="chef1 d-flex justify-content-between">
               <div class="">
                 <%= link_to chef_posts_path(@chef) do %>
-                <span class="text-info">Chefs Posts</span>
+                <span class="text-info">Chef posts</span>
                 <% end %>
               </div>
              <div class="">
@@ -40,8 +40,8 @@
 
             <div class="chef2 d-flex justify-content-between">
               <div class="">
-                <%= link_to chef_menus_path(@chef) do %>
-                <span class="text-info">Menus</span>
+                <%= link_to chef_path(@chef) do %>
+                <span class="text-info">Chef profile</span>
               <% end %>
               </div>
               <div class="">
@@ -56,10 +56,8 @@
     <div class="container-post-card-items">
       <% @posts.each do |post| %>
         <% if post.chef_id == @chef.id %>
-        <div class="post-card">
-          <div>
+          <div class="post-card">
             <%= cl_image_tag post.photo.key, crop: :fill, class:"post-card-image" %>
-          </div>
             <div class="post-card-date-description">
               <div class="post-card-posted"><p> <%= post.created_at.to_date %></p></div>
               <div class="post-card-description">
