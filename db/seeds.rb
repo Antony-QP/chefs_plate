@@ -25,19 +25,19 @@ user_10 = User.create!(email: "sarah@gmail.com", password: "123456")
 puts "Creating restaurants"
 restaurant_1 = Restaurant.create!({
     name: Faker::Restaurant.name,
-    location: "Abeelstraat 83, The Netherlands"
+    location: "Abeelstraat 83"
 })
 restaurant_2 = Restaurant.create!({
     name: Faker::Restaurant.name,
-    location: "Joh. Vermeerstraat 66, The Netherlands"
+    location: "Joh. Vermeerstraat 66"
 })
 restaurant_3 = Restaurant.create!({
     name: Faker::Restaurant.name,
-    location: "De Keverbergstraat 5, The Netherlands"
+    location: "De Keverbergstraat 5"
 })
 restaurant_4 = Restaurant.create!({
     name: Faker::Restaurant.name,
-    location: "Wibautstraat 276, The Netherlands"
+    location: "Wibautstraat 276"
 })
 restaurant_5 = Restaurant.create!({
     name: Faker::Restaurant.name,
@@ -45,23 +45,23 @@ restaurant_5 = Restaurant.create!({
 })
 restaurant_6 = Restaurant.create!({
     name: Faker::Restaurant.name,
-    location: "Van der Waalsstraat 173, The Netherlands"
+    location: "Van der Waalsstraat 173"
 })
 restaurant_7 = Restaurant.create!({
     name: Faker::Restaurant.name,
-    location: "Bos en Lommerweg 113, The Netherlands"
+    location: "Bos en Lommerweg 113"
 })
 restaurant_8 = Restaurant.create!({
     name: Faker::Restaurant.name,
-    location: "Lurvinksteeg 194, The Netherlands"
+    location: "Lurvinksteeg 194"
 })
 restaurant_9 = Restaurant.create!({
     name: Faker::Restaurant.name,
-    location: "Sportlaan 40, The Netherlands"
+    location: "Sportlaan 40"
 })
 restaurant_10 = Restaurant.create!({
     name: Faker::Restaurant.name,
-    location: "Anna Maria Geertruida Schmidtlaan 114, The Netherlands"
+    location: "Anna Maria Geertruida Schmidtlaan 114"
 })
 
 puts "Creating chefs"
