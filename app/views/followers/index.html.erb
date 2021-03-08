@@ -11,6 +11,7 @@
             <div class="">
                 <i class="far fa-calendar-alt display-4 mt-5 text-info"></i>
             </div>
+            <div><%= link_to "Bookings index", bookings_path, class: "bookings-table" %></div>
         </div>
         <div class="following-chef-grid">
             <% @followers.each do |follower| %>
