@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2021_03_08_135742) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -34,6 +35,17 @@ ActiveRecord::Schema.define(version: 2021_03_08_135742) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+
+  create_table "chef_ratings", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "chef_id"
+    t.bigint "user_id"
+    t.integer "rating"
+    t.index ["chef_id"], name: "index_chef_ratings_on_chef_id"
+    t.index ["user_id"], name: "index_chef_ratings_on_user_id"
   end
 
   create_table "bookings", force: :cascade do |t|
@@ -112,6 +124,8 @@ ActiveRecord::Schema.define(version: 2021_03_08_135742) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "chef_ratings", "chefs"
+  add_foreign_key "chef_ratings", "users"
   add_foreign_key "bookings", "restaurants"
   add_foreign_key "bookings", "users"
   add_foreign_key "chefs", "restaurants"
