@@ -22,6 +22,10 @@ class ChefsController < ApplicationController
 
     def show
         @chef = Chef.find(params[:id])
+        @chef_ratings = ChefRatings.where("chef_id == #{@chef}")
+        @rating = ChefRating.new(params[:chef_id])
+        @rating.user = current_user
+        @rating.save!
     end
 end
 
