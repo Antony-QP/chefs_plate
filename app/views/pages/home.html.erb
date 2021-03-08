@@ -2,17 +2,16 @@
 
   <div class="homepage-banner align-items-end">
     <div class='home-banner-details'>
-      <h1 class="banner-title">Find the most inspirational <br> chefs of today</h1>
-      <!-- TODO (Olivia): Add search chef for now working with restaurants -->
+      <h1 class="banner-title">Find the most inspirational chefs of today</h1>
         <form action="/chefs" id="form">
             <input name="location" class="form-control-for-hp w-100 fs-1" type="search" placeholder="  Where are you?">
           <button class="icon-search" type="submit">
             <a class="hp-search-button btn btn-info"><i class="fas fa-search"></i></a>
           </button>
         </form>
-      <a class="btn btn-chefit" href="#">Chef it out!</a>
+      <%= link_to "Chef it out!", chefit_path, class: "btn btn-chefit"%>
       <div class="arrow-hp">
-        <i class="fas fa-chevron-down fa-3x arrow-hp"></i>
+        <i class="fas fa-chevron-down fa-4x arrow-hp"></i>
       </div>
     </div>
   </div>
