@@ -4,5 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :chefs, through: :followers
+  has_many :chef_ratings
   has_one_attached :avatar
 end
