@@ -2,6 +2,7 @@ require 'faker'
 require 'open-uri'
 
 puts "Cleaning database"
+ChefRating.destroy_all
 Follower.destroy_all
 Menu.destroy_all
 Post.destroy_all
@@ -766,3 +767,74 @@ follower_1 = Follower.create!({
     user_id: user_1.id
 })
 
+#  Ratings 
+
+chef_rating_1 = ChefRating.new({
+    rating: 5,
+    chef_id: chef_1.id,
+    user_id: user_1.id
+})
+chef_rating_1.save!
+
+chef_rating_2 = ChefRating.new({
+    rating: 5,
+    chef_id: chef_2.id,
+    user_id: user_2.id
+})
+chef_rating_2.save!
+
+chef_rating_3 = ChefRating.new({
+    rating: 5,
+    chef_id: chef_3.id,
+    user_id: user_3.id
+})
+chef_rating_3.save!
+
+chef_rating_4 = ChefRating.new({
+    rating: 5,
+    chef_id: chef_4.id,
+    user_id: user_4.id
+})
+chef_rating_4.save!
+
+chef_rating_5 = ChefRating.new({
+    rating: 5,
+    chef_id: chef_5.id,
+    user_id: user_5.id
+})
+chef_rating_5.save!
+
+chef_rating_6 = ChefRating.new({
+    rating: 5,
+    chef_id: chef_6.id,
+    user_id: user_6.id
+})
+chef_rating_6.save!
+
+chef_rating_7 = ChefRating.new({
+    rating: 5,
+    chef_id: chef_7.id,
+    user_id: user_7.id
+})
+chef_rating_7.save!
+
+chef_rating_8 = ChefRating.new({
+    rating: 5,
+    chef_id: chef_8.id,
+    user_id: user_8.id
+})
+chef_rating_8.save!
+
+chef_rating_9 = ChefRating.new({
+    rating: 5,
+    chef_id: chef_9.id,
+    user_id: user_9.id
+})
+chef_rating_9.save!
+
+chef_rating_10 = ChefRating.new({
+    rating: 5,
+    chef_id: chef_10.id,
+    user_id: user_10.id
+})
+chef_rating_10.save!

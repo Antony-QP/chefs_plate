@@ -42,7 +42,29 @@
               <i class="fab fa-pinterest"></i>
             </a>
           </div>
-          <div class="ml-2"><span>(<%= @chef.followers.count %> followers)</span></div>
+          <div class="ml-2"><span>(<%= @chef.followers.count %> followers)</span>
+          </div>
+        </div>
+        <div class="chef-ratings">
+            <% rating_count = [] %>
+            <% @chef.chef_ratings.each do |rating| %>
+            <% rating_count.push(rating.rating) %>
+          <% end %>
+        <% (rating_count.sum/rating_count.length).to_i.times do  %>
+        <i class="fas fa-star text-primary"></i>
+        <!-- <i class="far fa-star"></i> -->
+        <% end  %>
+        <% (5 - (rating_count.sum/rating_count.length)).times do  %>
+        <i class="far fa-star text-primary"></i>
+        <% end  %>
+          
+        <div class="">
+          <%= simple_form_for [@chef, @chef_rating] do |f| %>
+          <%= f.hidden_field :user_id, value: current_user.id %>
+          <%= f.input :rating, collection: 0..5 %>
+          <%= f.submit "Rate", class: "btn btn-primary" %>
+        <% end  %>
+        </div>
         </div>
 
           <div class="chef1 d-flex justify-content-between">
