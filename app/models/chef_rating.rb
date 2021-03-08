@@ -1,0 +1,2 @@
+class ChefRating < ApplicationRecord
+end
