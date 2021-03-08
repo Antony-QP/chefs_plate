@@ -6,6 +6,9 @@
         <div class="chef-show-img-profile"
             style="background-image: url('<%= cl_image_path(@chef.photos[0].key, crop: :fill )%>')">
         </div>
+          <div id="center-chef-name">
+            <%= @chef.first_name %> <%= @chef.last_name %>
+          </div>
         <div class="">
           <div class="below-chef-img d-flex justify-content-center mr-5">
             <div class="">
