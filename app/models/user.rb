@@ -5,5 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :chefs, through: :followers
   has_many :bookings
+  has_many :received_bookings, through: :bookings
   has_one_attached :avatar
 end

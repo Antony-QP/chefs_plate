@@ -3,13 +3,16 @@
         <% @bookings.each do |booking|%>
            <div class="booking-card d-flex">
               <div class="booking-date-time">
-                <p>Date: <%= booking.start_date %></p>
-                <p>Time: <%= booking.start_time %></p>
+                <p>Date: <b><%= booking.start_date %></b></p>
+                <p>Time: <b><%= booking.start_time %></b></p>
               </div>
-                
-                <%= link_to chef_path(booking.restaurant.main_chef) do %>
-                <p>Restaurant:<strong><%= booking.restaurant.name %></strong></p>
+                <div class="booking-card-restaurant">
+                    <div><h5>Restaurant:</h5></div>
+                    <%= link_to chef_path(booking.restaurant.main_chef) do %>
+                    <strong><%= booking.restaurant.name %></strong>
+
                 <% end %>
+                </div>
            </div>
         <% end %>
     </div>

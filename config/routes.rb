@@ -16,5 +16,5 @@ Rails.application.routes.draw do
 
   resources :menus, only: [:show]
   resources :followers, only: [:index, :destroy]
-  resources :bookings, only: [:index, :new, :create]
+  resources :bookings, only: [:index, :new, :create, :destroy]
 end
