@@ -21,7 +21,7 @@ const initMapbox = () => {
             element.style.backgroundSize = "contain";
             element.style.width = "30px";
             element.style.height = "30px";
-            element.style.fill = "#FF395B"
+            element.style.fill = "#FF395B";
 
             new mapboxgl.Marker(element)
                 .setLngLat([marker.lng, marker.lat])
