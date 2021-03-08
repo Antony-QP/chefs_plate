@@ -9,6 +9,12 @@ Rails.application.routes.draw do
     resources :posts, only: [:index]
     resources :followers, only: [:new, :create]
   end
+  
+  resources :restaurants do
+    resources :bookings, only: [:new, :create]
+  end
+
   resources :menus, only: [:show]
   resources :followers, only: [:index, :destroy]
+  resources :bookings, only: [:index, :new, :create, :destroy]
 end

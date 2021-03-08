@@ -1,0 +1,6 @@
+<%= simple_form_for [@restaurant, @booking] do |f| %>
+<%=  f.input :start_date, as: :date %>
+<%=  f.input :start_time, as: :string %>
+<%= f.submit %>
+<%  end %>
+
