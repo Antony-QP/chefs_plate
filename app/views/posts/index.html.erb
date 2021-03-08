@@ -1,29 +1,74 @@
 <div class="container-post-card d-flex">
 
-    <div class="post-links">
-      <div id="chef-profile-picture" class="chef-card-img" style="background-image: url('<%= cl_image_path @chef.photos[0].key, crop: :fill %>')"></div>
-      <div class="post-menu-links">
-        <div id='posts-links' class="chef1"> <%= link_to "Chef's Menu", chef_menus_path(@chef) %></div>
-        <div id='posts-links' class="chef2"> <%= link_to "Chef's Profile", chef_path(@chef)  %></div>
-        <div id='posts-links' class="chef2"> <%= link_to "All Chef's", chefs_path  %></div>
+  <div class="container-posts-list">
+    <div class="chef-posts-grid">
+      <div id="posts-list-menu">
+        <div class="chef-show-img-profile"
+            style="background-image: url('<%= cl_image_path(@chef.photos[0].key, crop: :fill )%>')">
+        </div>
+          <div id="center-chef-name">
+            <%= @chef.first_name %> <%= @chef.last_name %>
+          </div>
+        <div class="">
+          <div class="below-chef-img d-flex justify-content-center mr-5">
+            <div class="">
+          </div>
+        </div>
+
+        <div class="post-menu">
+          <div class="d-flex ml-3">
+            <div class="">
+              <a href="#">
+                <i class="fab fa-fw fa-instagram fa-2x"></i>
+              </a>
+            </div>
+            <div class="">
+              <a href="#">
+                <i class="fab fa-pinterest fa-2x"></i>
+              </a>
+            </div>
+            <div class="ml-2"><span>(<%= @chef.followers.count %> followers)</span></div>
+          </div>
+
+            <div class="chef1 d-flex justify-content-between">
+              <div class="">
+                <%= link_to chef_posts_path(@chef) do %>
+                <span class="text-info">Chef posts</span>
+                <% end %>
+              </div>
+             <div class="">
+              <i class="fas fa-chevron-right"></i>
+             </div>
+            </div>
+
+            <div class="chef2 d-flex justify-content-between">
+              <div class="">
+                <%= link_to chef_path(@chef) do %>
+                <span class="text-info">Chef profile</span>
+              <% end %>
+              </div>
+              <div class="">
+                <i class="fas fa-chevron-right"></i>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
 
-     
-    </div> 
-      
     <div class="container-post-card-items">
       <% @posts.each do |post| %>
         <% if post.chef_id == @chef.id %>
-        <div class="post-card">
-            <div class="post-card-image" style="background-image: url('<%= cl_image_path post.photo.key, crop: :fill %>')"></div>
+          <div class="post-card">
+            <%= cl_image_tag post.photo.key, crop: :fill, class:"post-card-image" %>
             <div class="post-card-date-description">
               <div class="post-card-posted"><p> <%= post.created_at.to_date %></p></div>
               <div class="post-card-description">
-                <p><%= post.description %></p>
+                <%= truncate(post.description, length: 150, omission:"... Read more") %>
               </div>
             </div>
           </div>
         <% end %>
-      <% end  %> 
+      <% end  %>
     </div>
 </div>

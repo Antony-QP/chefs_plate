@@ -1,0 +1,19 @@
+<div class="bookings-container d-flex">
+    <div class="booking-container-card m-auto w-50" >
+        <% @bookings.each do |booking|%>
+           <div class="booking-card d-flex">
+              <div class="booking-date-time">
+                <p>Date: <b><%= booking.start_date %></b></p>
+                <p>Time: <b><%= booking.start_time %></b></p>
+              </div>
+                <div class="booking-card-restaurant">
+                    <div><h5>Restaurant:</h5></div>
+                    <%= link_to chef_path(booking.restaurant.main_chef) do %>
+                    <strong><%= booking.restaurant.name %></strong>
+
+                <% end %>
+                </div>
+           </div>
+        <% end %>
+    </div>
+</div>

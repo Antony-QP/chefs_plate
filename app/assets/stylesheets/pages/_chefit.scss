@@ -1,0 +1,47 @@
+.chefit-main-container {
+  padding-bottom: 50px;
+}
+
+.chefit-banner {
+  height: 87vh;
+  width: 100%;
+  background-size: cover;
+  background-image: linear-gradient(rgba(255, 183, 4, 0.3), rgba(0,0,0,0.3)), url("https://images.pexels.com/photos/4577179/pexels-photo-4577179.jpeg?cs=srgb&dl=pexels-rachel-claire-4577179.jpg&fm=jpg");
+  background-position: center;
+  display: flex;
+  justify-content: center;
+}
+
+.chefit-banner-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -150px;
+}
+
+.banner-title {
+  color: white;
+  font-size: 62px;
+  margin-bottom: 50px;
+}
+
+.banner-sub-title {
+  color: $primary;
+  font-size: 38px;
+}
+
+.chef-card-grid-container2 {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+
+
+}
+
+.chef-card2{
+    width: 85%;
+    height: auto;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
