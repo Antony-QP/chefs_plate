@@ -12,47 +12,50 @@
 
 <div class="p-2 mt-3 chef-flex-container">
   <div class="chef-card-grid-container2">
-      <% @chefs.each do |chef| %>
+
+    <% @top_chefs.each do |top_chef| %>
+
       <div class="chef-card2 mb-2 grid-item rounded">
         <div class="d-flex justify-content-between mb-1 border-bottom">
           <div class="">
             <span class="font-weight-bold">
-            <%= link_to chef_path(chef) do %>
-              <%= chef.first_name %> <%= chef.last_name %></span
-            >
+            <%= link_to chef_path(top_chef.chef) do %>
+              <%= top_chef.chef.first_name %> <%= top_chef.chef.last_name %></span>
           <% end %>
-            <div class=""><span><%= chef.restaurant.name %></span></div>
+            <div class=""><span><%= top_chef.chef.restaurant.name %></span></div>
           </div>
           <div class="">
-            <%= link_to chef_followers_path(chef), method: :post do %>
+
             <i class="far fa-heart text-primary"></i>
-          <% end  %>
+
           </div>
         </div>
         <div class="">
-          <i class="fas fa-map-marker-alt text-primary mr-2"></i><span class="location-name"><%= chef.restaurant.location %></span>
+          <i class="fas fa-map-marker-alt text-primary mr-2"></i><span class="location-name"><%= top_chef.chef.restaurant.location %></span>
         </div>
         <div class="chef-card-img-container">
           <div
             class="chef-card-img rounded"
             style="
-              background-image: url('<%= cl_image_path chef.photos[0].key, crop: :fill %>');
+              background-image: url('<%= cl_image_path top_chef.chef.photos[0].key, crop: :fill %>');
             "
           ></div>
           <div
             class="chef-card-img rounded"
             style="
-              background-image: url('<%= cl_image_path chef.menus[0].photos[0].key, crop: :fill %>');
+              background-image: url('<%= cl_image_path top_chef.chef.menus[0].photos[0].key, crop: :fill %>');
             "
           ></div>
           <div
             class="chef-card-img rounded"
             style="
-              background-image: url('<%= cl_image_path chef.menus[0].photos[1].key, crop: :fill %>');
+              background-image: url('<%= cl_image_path top_chef.chef.menus[0].photos[1].key, crop: :fill %>');
             "
           ></div>
-        </div>
-      </div>
+            </div>
+          </div>
+
       <% end %>
+    </div>
   </div>
 </div>
