@@ -4,6 +4,9 @@
       <div class="chef-show-img-profile"
           style="background-image: url('<%= cl_image_path(@chef.photos[0].key, crop: :fill )%>')">
       </div>
+      <div id="center-chef-name">
+            <%= @chef.first_name %> <%= @chef.last_name %>
+      </div>
       <div class="">
         <div class="below-chef-img d-flex justify-content-center mr-5">
           <div class="">
@@ -51,18 +54,18 @@
         </div>
       </div>
 
-  <div class="menu-chef-grid" id="additional-padding-menus">
+  <div class="menu-chef-grid">
     <% @chef.menus.each do |menu| %>
     <%= link_to  menu_path(menu) do %>
-      <div class="menu-index-card">
+      <div class="card-display-menus">
         <div class="mr-2">
-          <div class="menu-thumbnail rounded" style="background-image: url('<%= cl_image_path menu.photos[0].key, crop: :fill %>');">
+          <div class="menu-thumbnail" id="border-radius-image" style="background-image: url('<%= cl_image_path menu.photos[0].key, crop: :fill %>');">
           </div>
-          <div class="">
-            <span class="font-weight-bold chef-full-name"
-              ><%= menu.title %></span>
-            <div class=""><span class="font-weight-bold border-bottom chef-full-name"><%= menu.cuisine %></span></div>
-            <span class="chef-restaurant"><%= menu.price %>€</span>
+          <div id="menu-description-details">
+            <div class="title-menu-additional-styling"
+              ><strong><%= menu.title %></strong></div>
+            <div class="cuisine-menu-additional-styling">Cuisine: <%= menu.cuisine %></div>
+            <div class="cuisine-menu-additional-styling">Price: <%= menu.price %>€</div>
           </div>
           </div>
         </div>
