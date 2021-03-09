@@ -25,7 +25,9 @@ require("channels")
 // External imports
 import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
+
 import { initStarRating } from '../plugins/init_star_rating';
+
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -41,6 +43,8 @@ const iphone = window.matchMedia('(max-width: 400px)')
 
 
 const insertMap = () => {
+
+
     gridContainer.classList.toggle("toggle-single-column")
     gridContainer.classList.toggle("toggle-half-width")
     map.classList.toggle("toggle-hide-content")
@@ -48,6 +52,7 @@ const insertMap = () => {
     chefFlexContainer.classList.toggle("toggle-flex")
     icon.classList.toggle("toggle-hide-content")
     gridIcon.classList.toggle("toggle-hide-content")
+
   console.log("clicked")
 }
 
