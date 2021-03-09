@@ -67,8 +67,13 @@
   font-size: 20px;
 }
 
+.btn-chefit:hover {
+  background: #FFC65A;
+  color: rgb(25, 29, 14);
+}
+
 .arrow-hp {
-  color: black;
+  color: white;
 }
 
 .hp-link-to-customize a {
@@ -84,9 +89,12 @@ input {
   background: white;
 }
 
+
 input[type=text]:active, input[type=text]:focus {
   background-color: white;
 }
+
+
 
 
 
@@ -107,6 +115,10 @@ input[type=text]:active, input[type=text]:focus {
 .hp-card-title {
   text-decoration: none;
   color: black;
+}
+
+.hp-card-title:hover {
+  color: $primary;
 }
 
 .homepage-card {
