@@ -25,6 +25,10 @@ require("channels")
 // External imports
 import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
+// import Flatpickr
+import Flatpickr from 'stimulus-flatpickr'
+// Import style for flatpickr
+require("flatpickr/dist/flatpickr.css")
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -71,16 +75,16 @@ const insertMap = () => {
   //   icon.classList.toggle("toggle-hide-content")
   //   gridIcon.classList.toggle("toggle-hide-content")
   // }else{
-    gridContainer.classList.toggle("toggle-single-column")
-    gridContainer.classList.toggle("toggle-half-width")
-    map.classList.toggle("toggle-hide-content")
-    mapContainer.classList.toggle("toggle-hide-content")
-    chefFlexContainer.classList.toggle("toggle-flex")
-    icon.classList.toggle("toggle-hide-content")
-    gridIcon.classList.toggle("toggle-hide-content")
+  gridContainer.classList.toggle("toggle-single-column")
+  gridContainer.classList.toggle("toggle-half-width")
+  map.classList.toggle("toggle-hide-content")
+  mapContainer.classList.toggle("toggle-hide-content")
+  chefFlexContainer.classList.toggle("toggle-flex")
+  icon.classList.toggle("toggle-hide-content")
+  gridIcon.classList.toggle("toggle-hide-content")
   // }
 
-  
+
   console.log("clicked")
 }
 
