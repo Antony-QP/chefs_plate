@@ -34,7 +34,7 @@ restaurant_2 = Restaurant.create!({
 })
 restaurant_3 = Restaurant.create!({
     name: Faker::Restaurant.name,
-    location: "Gebouw 024A, Kattenburgerstraat 5, 1018 JA Amsterdam"
+    location: "Gebouw 024A, Kattenburgerstraat 5 1018 JA Amsterdam"
 })
 restaurant_4 = Restaurant.create!({
     name: Faker::Restaurant.name,
@@ -46,7 +46,7 @@ restaurant_5 = Restaurant.create!({
 })
 restaurant_6 = Restaurant.create!({
     name: Faker::Restaurant.name,
-    location: "Jan Pieter Heijestraat 118, 1054 MH Amsterdam"
+    location: "Jan Pieter Heijestraat 118 1054 MH Amsterdam"
 })
 restaurant_7 = Restaurant.create!({
     name: Faker::Restaurant.name,
@@ -58,7 +58,7 @@ restaurant_8 = Restaurant.create!({
 })
 restaurant_9 = Restaurant.create!({
     name: Faker::Restaurant.name,
-    location: "Johannes Verhulststraat 64, 1071 NH Amsterdam"
+    location: "Johannes Verhulststraat 64 1071 NH Amsterdam"
 })
 restaurant_10 = Restaurant.create!({
     name: "Restaurant Blue",
@@ -70,39 +70,39 @@ restaurant_11 = Restaurant.create!({
 })
 restaurant_12 = Restaurant.create!({
     name: "De Kas",
-    location: "Kamerlingh Onneslaan 3, 1097 DE Amsterdam"
+    location: "Kamerlingh Onneslaan 3 1097 DE Amsterdam"
 })
 restaurant_13 = Restaurant.create!({
     name: "The Quarantaine",
-    location: "Rietlandpark 373, 1019 EM Amsterdam"
+    location: "Rietlandpark 373 1019 EM Amsterdam"
 })
 restaurant_14 = Restaurant.create!({
     name: "Visrestaurant Calamares",
-    location: "Burgemeester Fockstraat 60, 1063 CV Amsterdam"
+    location: "Burgemeester Fockstraat 60 1063 CV Amsterdam"
 })
 restaurant_15 = Restaurant.create!({
     name: "Later aan het Water",
-    location: "Nieuwemeerdijk 98, 1171 NE Badhoevedorp"
+    location: "Nieuwemeerdijk 98 1171 NE Badhoevedorp"
 })
 restaurant_16 = Restaurant.create!({
     name: "Klein Kalfje",
-    location: "Amsteldijk Noord 355, 1083 AB Amsterdam"
+    location: "Amsteldijk Noord 355 1083 AB Amsterdam"
 })
 restaurant_17 = Restaurant.create!({
     name: "The Lobby Fizeaustraat",
-    location: "Fizeaustraat 2, 1097 SC Amsterdam"
+    location: "Fizeaustraat 2 1097 SC Amsterdam"
 })
 restaurant_18 = Restaurant.create!({
     name: "De VerbroederIJ",
-    location: "Johan van Hasseltweg 21, 1021 KN Amsterdam"
+    location: "Johan van Hasseltweg 21 1021 KN Amsterdam"
 })
 restaurant_19 = Restaurant.create!({
     name: "Lab-44",
-    location: "Middenweg 44, 1505 RK Zaandam"
+    location: "Middenweg 44 1505 RK Zaandam"
 })
 restaurant_20 = Restaurant.create!({
     name: "Golfclub Houtrak clubhuis",
-    location: "Machineweg 2, 1165 NB Halfweg"
+    location: "Machineweg 2 1165 NB Halfweg"
 })
 
 puts "Creating chefs"
