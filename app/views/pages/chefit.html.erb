@@ -13,7 +13,7 @@
 <div class="p-2 mt-3 chef-flex-container">
   <div class="chef-card-grid-container2">
 
-    <% @top_chefs.each do |top_chef| %>
+    <% @top_chefs.sample(3).each do |top_chef| %>
 
       <div class="chef-card2 mb-2 grid-item rounded">
         <div class="d-flex justify-content-between mb-1 border-bottom">
