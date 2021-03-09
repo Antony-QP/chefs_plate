@@ -20,6 +20,7 @@
 .post-card-description {
     padding-right: 15px;
     font-size: 14px;
+    font-family: Roboto;
 }
 
 .post-card-description p {
@@ -38,22 +39,23 @@
 }
 
 .post-card-image {
-    width: 27%;
-    height: 100%;
-    object-fit: cover;
-    margin-right: 30px;
-    border-radius: 16px 0 0 16px;
-}
-
-.post-card-posted {
-    text-align: left;
-    font-weight: bold;
-    padding-right: 25px;
+  width: 27%;
+  height: 100%;
+  object-fit: cover;
+  margin-right: 30px;
+  border-radius: 16px 0 0 16px;
 }
 
 .post-card-posted p {
   margin: 0px;
   font-size: 12px;
+}
+
+#postedon-styling {
+  text-align: right;
+  font-size: 14px;
+  padding: 10px;
+  color: #393e46;
 }
 
 .container-post-card-items {
