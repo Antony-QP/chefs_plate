@@ -25,6 +25,7 @@ require("channels")
 // External imports
 import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
+import { initStarRating } from '../plugins/init_star_rating';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -40,37 +41,6 @@ const iphone = window.matchMedia('(max-width: 400px)')
 
 
 const insertMap = () => {
-  // if(gridContainer.classList.contains("toggle-single-column")){
-  //   gridContainer.classList.remove("toggle-single-column")
-  // }else{
-  //   gridContainer.classList.add("toggle-single-column")
-  // }
-
-  // if(gridContainer.classList.contains("toggle-half-width")){
-  //   gridContainer.classList.remove("toggle-half-width")
-  // }else{
-  //   gridContainer.classList.add("toggle-half-width")
-  // }
-
-  // if(map.classList.contains("toggle-hide-content")){
-  //   map.classList.remove("toggle-hide-content")
-  // }else{
-  //   map.classList.add("toggle-hide-content")
-  // }
-
-  // if(chefFlexContainer.classList.contains("toggle-flex")){
-  //   chefFlexContainer.classList.remove("toggle-flex")
-  // }else{
-  //   chefFlexContainer.classList.add("toggle-flex")
-  // }
-
-  // if(iphone.matches){
-  //   map.classList.toggle("toggle-hide-content")
-  //   mapContainer.classList.toggle("toggle-hide-content")
-  //   mapContainer.classList.toggle("toggle-hide-content")
-  //   icon.classList.toggle("toggle-hide-content")
-  //   gridIcon.classList.toggle("toggle-hide-content")
-  // }else{
     gridContainer.classList.toggle("toggle-single-column")
     gridContainer.classList.toggle("toggle-half-width")
     map.classList.toggle("toggle-hide-content")
@@ -78,18 +48,14 @@ const insertMap = () => {
     chefFlexContainer.classList.toggle("toggle-flex")
     icon.classList.toggle("toggle-hide-content")
     gridIcon.classList.toggle("toggle-hide-content")
-  // }
-
-  
   console.log("clicked")
 }
-
-icon.addEventListener('click', insertMap)
-gridIcon.addEventListener('click', insertMap)
-
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   initMapbox();
+  initStarRating();
+  icon.addEventListener('click', insertMap)
+  gridIcon.addEventListener('click', insertMap)
 });

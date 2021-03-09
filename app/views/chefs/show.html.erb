@@ -1,143 +1,148 @@
-
 <div class="container-show-text">
-    <h4 class="header-text"><medium><%= @chef.first_name %> <%= @chef.last_name %></medium></h4>
-    <h6 class="sub-header-text"><%= @chef.restaurant.name %> - <%= @chef.restaurant.location %> </h6>
+  <h4 class="header-text">
+    <medium><%= @chef.first_name %> <%= @chef.last_name %></medium>
+  </h4>
+  <h6 class="sub-header-text">
+    <%= @chef.restaurant.name %> - <%= @chef.restaurant.location %>
+  </h6>
 </div>
 
 <div class="d-flex justify-content-center">
-    <div
-      class="chef-show-img"
-      style="background-image: url('<%= cl_image_path(@chef.menus[0].photos[0].key, crop: :fill )%>')">
-    </div>
-    <div
-      class="chef-show-img"
-      style="background-image: url('<%= cl_image_path(@chef.menus[0].photos[1].key, crop: :fill )%>')">
-    </div>
+  <div
+    class="chef-show-img"
+    style="
+      background-image: url('<%= cl_image_path(@chef.menus[0].photos[0].key, crop: :fill )%>');
+    "
+  ></div>
+  <div
+    class="chef-show-img"
+    style="
+      background-image: url('<%= cl_image_path(@chef.menus[0].photos[1].key, crop: :fill )%>');
+    "
+  ></div>
 </div>
 
-<div class="spacing-show">
-</div>
+<div class="spacing-show"></div>
 
 <div class="container-show-story">
   <div class="chef-profile-grid">
     <div>
-      <div class="chef-show-img-profile"
-          style="background-image: url('<%= cl_image_path(@chef.photos[0].key, crop: :fill )%>')">
-      </div>
+      <div
+        class="chef-show-img-profile"
+        style="
+          background-image: url('<%= cl_image_path(@chef.photos[0].key, crop: :fill )%>');
+        "
+      ></div>
       <div class="">
         <div class="below-chef-img d-flex justify-content-center mr-5">
-          <div class="">
-        </div>
-      </div>
-
-      <div class="post-menu">
-        <div class="d-flex ml-3">
-          <div class="">
-            <a href="#">
-              <i class="fab fa-fw fa-instagram"></i>
-            </a>
-          </div>
-          <div class="">
-            <a href="#">
-              <i class="fab fa-pinterest"></i>
-            </a>
-          </div>
-          <div class="ml-2"><span>(<%= @chef.followers.count %> followers)</span>
-          </div>
-        </div>
-        <div class="chef-ratings">
-            <% rating_count = [] %>
-            <% @chef.chef_ratings.each do |rating| %>
-            <% rating_count.push(rating.rating) %>
-          <% end %>
-        <% (rating_count.sum/rating_count.length).to_i.times do  %>
-        <i class="fas fa-star text-primary"></i>
-        <!-- <i class="far fa-star"></i> -->
-        <% end  %>
-        <% (5 - (rating_count.sum/rating_count.length)).times do  %>
-        <i class="far fa-star text-primary"></i>
-        <% end  %>
-          
-        <div class="">
-          <%= simple_form_for [@chef, @chef_rating] do |f| %>
-          <%= f.hidden_field :user_id, value: current_user.id %>
-          <%= f.input :rating, collection: 0..5 %>
-          <%= f.submit "Rate", class: "btn btn-primary" %>
-        <% end  %>
-        </div>
+          <div class=""></div>
         </div>
 
+        <div class="post-menu">
+          <div class="d-flex ml-3">
+            <div class="">
+              <a href="#">
+                <i class="fab fa-fw fa-instagram"></i>
+              </a>
+            </div>
+            <div class="">
+              <a href="#">
+                <i class="fab fa-pinterest"></i>
+              </a>
+            </div>
+            <div class="ml-2">
+              <span>(<%= @chef.followers.count %> followers)</span>
+            </div>
+          </div>
+          <div class="d-flex ml-5 text-center">
+            <%= simple_form_for [@chef, @chef_rating], html: { class:
+            "review_form" } do |f| %> <%= f.hidden_field :user_id, value:
+            current_user.id %> <%= f.input :rating, collection: (1..5).to_a,
+            label: "Rate #{@chef.first_name}"%> <%= f.submit "Rate", class:
+            "d-none" %> <% end %>
+          </div>
           <div class="chef1 d-flex justify-content-between">
             <div class="">
               <%= link_to chef_posts_path(@chef) do %>
               <span class="text-info">Chefs Posts</span>
               <% end %>
             </div>
-           <div class="">
-            <i class="fas fa-chevron-right"></i>
-           </div>
+            <div class="">
+              <i class="fas fa-chevron-right"></i>
+            </div>
           </div>
 
           <div class="chef2 d-flex justify-content-between">
             <div class="">
               <%= link_to chef_menus_path(@chef) do %>
               <span class="text-info">Menus</span>
-            <% end %>
+              <% end %>
             </div>
             <div class="">
               <i class="fas fa-chevron-right"></i>
             </div>
           </div>
-
         </div>
       </div>
-
     </div>
     <div class="">
       <p class="story-text">
         <%= @chef.inspiration %>
-       <br>
-       <br>
-         <%= @chef.work_history %>
-       <br>
-       <br>
-         <%= @chef.mission %>
-       </p>
-       <div class="d-flex justify-content-end">
+        <br />
+        <br />
+        <%= @chef.work_history %>
+        <br />
+        <br />
+        <%= @chef.mission %>
+      </p>
+      <div class="d-flex justify-content-end">
         <div class="chef-name-signature">
           <%= @chef.first_name %> <%= @chef.last_name %>
         </div>
-       </div>
+      </div>
     </div>
-
 
     <div class="">
       <div class="">
+        <div class="chef-ratings text-center mb-5">
+          <% rating_count = [] %> <% @chef.chef_ratings.each do |rating| %> <%
+          rating_count.push(rating.rating) %> 
+          <% end %> 
+          <%(rating_count.sum/rating_count.length).to_i.times do %>
+          <i class="fas fa-star text-primary"></i>
+          <% end %> <% (5 - (rating_count.sum/rating_count.length)).times do %>
+          <i class="far fa-star text-primary"></i>
+          <% end %>
+          <span class="text-info">(<%= rating_count.length %>)</span>
+        </div>
         <div class="d-flex justify-content-center">
-          <%= link_to "Book table", new_restaurant_booking_path(@chef.restaurant), class: "book-table" %>
+          <%= link_to "Book table",
+          new_restaurant_booking_path(@chef.restaurant), class: "book-table" %>
         </div>
       </div>
       <div class="chef-insight">
         <span><strong> Status: </strong></span>
-        <p> Our pasta chef has a acquired a rare italian flower we are using with our lobster ravioli.</p>
+        <p>
+          Our pasta chef has a acquired a rare italian flower we are using with
+          our lobster ravioli.
+        </p>
       </div>
     </div>
   </div>
 </div>
 
-<div class="line-below">
-</div>
+<div class="line-below"></div>
 
 <div class="container-last-part d-flex justify-content-center mt-5">
   <div class="d-flex">
     <div class="restaurant-info">
       <div class="chef4"><strong>Restaurant Information</strong></div>
-      <div class="chef5"> Restaurant: <%= @chef.restaurant.name %></div>
-      <div class="chef3"> Address: <%= @chef.restaurant.location %> </div>
-      <div class="chef3"> Opening hours: 17:00 - 01:00 </div>
+      <div class="chef5">Restaurant: <%= @chef.restaurant.name %></div>
+      <div class="chef3">Address: <%= @chef.restaurant.location %></div>
+      <div class="chef3">Opening hours: 17:00 - 01:00</div>
     </div>
-      <div class="">
-        <%= image_tag("map-placeholder.png", class: "little-map") %>
-      </div>
+    <div class="">
+      <%= image_tag("map-placeholder.png", class: "little-map") %>
+    </div>
   </div>
 </div>
