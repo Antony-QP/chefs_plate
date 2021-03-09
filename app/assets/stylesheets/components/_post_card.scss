@@ -1,4 +1,4 @@
-.post-card {
+.post-card-details {
     margin: 20px;
     width: 80%;
     display: flex;
@@ -6,9 +6,8 @@
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     border-radius: 16px;
-    height: 200px;
+    height: 148px;
     overflow: hidden;
-
 }
 
 #center-chef-name {
@@ -20,7 +19,7 @@
 
 .post-card-description {
     padding-right: 15px;
-    font-size: 17px;
+    font-size: 14px;
 }
 
 .post-card-description p {
@@ -39,7 +38,7 @@
 }
 
 .post-card-image {
-    width: 30%;
+    width: 27%;
     height: 100%;
     object-fit: cover;
     margin-right: 30px;
@@ -50,7 +49,11 @@
     text-align: left;
     font-weight: bold;
     padding-right: 25px;
-    padding-bottom: 10px;
+}
+
+.post-card-posted p {
+  margin: 0px;
+  font-size: 12px;
 }
 
 .container-post-card-items {
@@ -59,22 +62,22 @@
 }
 
 .post-card-date-description {
-    width: 70%;
-    height: 90%;
-    padding: 20px;
+  width: 70%;
+  height: 90%;
+  padding: 20px;
 }
 
 #chef-profile-picture {
-    width: 200px;
-    height: 200px;
-    border-radius: 16px;
-    background-size: cover;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  width: 200px;
+  height: 200px;
+  border-radius: 16px;
+  background-size: cover;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 #posts-links {
-    width: fit-content;
-    color: #191d0e;
+  width: fit-content;
+  color: #191d0e;
 }
 
 #posts-list-menu {
