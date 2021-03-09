@@ -106,8 +106,8 @@
       <div class="">
         <div class="chef-ratings text-center mb-5">
           <% rating_count = [] %> <% @chef.chef_ratings.each do |rating| %> <%
-          rating_count.push(rating.rating) %> 
-          <% end %> 
+          rating_count.push(rating.rating) %>
+          <% end %>
           <%(rating_count.sum/rating_count.length).to_i.times do %>
           <i class="fas fa-star text-primary"></i>
           <% end %> <% (5 - (rating_count.sum/rating_count.length)).times do %>
