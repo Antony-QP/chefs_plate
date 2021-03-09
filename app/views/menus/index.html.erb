@@ -57,7 +57,7 @@
     <% @chef.menus.each do |menu| %>
     <%= link_to  menu_path(menu) do %>
       <div class="card-display-menus">
-        <div class="mr-2">
+        <div>
           <div class="menu-thumbnail" id="border-radius-image" style="background-image: url('<%= cl_image_path menu.photos[0].key, crop: :fill %>');">
           </div>
           <div id="menu-description-details">

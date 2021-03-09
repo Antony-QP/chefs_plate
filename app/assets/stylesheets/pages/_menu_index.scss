@@ -14,7 +14,8 @@
 }
 
 #border-radius-image {
-  border-radius: 16px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 
 .title-menu-additional-styling {
@@ -38,3 +39,13 @@
 .card-display-menus:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
+
+#menu-description-details {
+  padding: 7px 7px 7px 7px;
+  font-family: Roboto;
+}
+
+.menu-chef-grid a:hover {
+  text-decoration: none;
+}
+
