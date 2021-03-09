@@ -24,6 +24,7 @@ require("channels")
 
 // External imports
 import "bootstrap";
+// import { initColorHearts } from './yellowHearts'
 import { initMapbox } from '../plugins/init_mapbox';
 
 import { initStarRating } from '../plugins/init_star_rating';
@@ -63,4 +64,5 @@ document.addEventListener('turbolinks:load', () => {
   initStarRating();
   icon.addEventListener('click', insertMap)
   gridIcon.addEventListener('click', insertMap)
+  // initColorHearts()
 });
