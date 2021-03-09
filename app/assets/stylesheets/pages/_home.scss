@@ -42,20 +42,27 @@
   border-radius: 50px;
   height: 60px;
   font-size: 20px;
+  padding: 0 20px;
 }
 
 .icon-search a {
   background-color: rgb(250, 183, 6);
   border-radius: 50px;
   border: #FFB703;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .icon-search {
   position: absolute;
   right: 50px;
-  bottom: 50px;
   border: none;
-  background: white;
+  background: none;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .btn-chefit {
