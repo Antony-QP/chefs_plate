@@ -34,14 +34,14 @@
 .chef-card-grid-container2 {
     display: grid;
     justify-items: center;
-    grid-template-columns: 1fr 1fr;
-
-
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 15px;
 }
 
 .chef-card2{
-    width: 85%;
+    width: 100%;
     height: auto;
     padding: 10px;
+    margin-top: 50px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }

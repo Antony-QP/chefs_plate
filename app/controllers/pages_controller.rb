@@ -4,6 +4,6 @@ class PagesController < ApplicationController
   end
 
   def chefit
-    @chefs = Chef.all.sample(4)
+    @chefs = Chef.all.sample(3)
   end
 end
