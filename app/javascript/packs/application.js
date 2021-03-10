@@ -57,9 +57,27 @@ const insertMap = () => {
   console.log("clicked")
 }
 
+const token = document.head.querySelector('meta[name="csrf-token"]').content
+
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  navigator.geolocation.getCurrentPosition((position)=>{
+   fetch("/user_coords", {
+   method: "PATCH",
+    headers: {
+     "X-CSRF-Token": token,
+      "Content-Type": "application/json"
+    },
+   body: JSON.stringify({ user: {longitude: position.coords.longitude,
+   latitude: position.coords.latitude} })
+  })
+     .then(response => response.json())
+     .then((data) => {
+      console.log(data)
+     });
+  })
+
   initMapbox();
   initStarRating();
   icon.addEventListener('click', insertMap)

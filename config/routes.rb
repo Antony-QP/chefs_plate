@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'chefit', to: 'pages#chefit', as: 'chefit'
   get 'dashboard', to: 'pages#dashboard', as: 'dashboard'
 
+  patch 'user_coords', to: 'users#update'
+
   resources :chefs, only: [:index, :show] do
     resources :menus, only: [:index ]
     resources :posts, only: [:index]
@@ -13,7 +15,7 @@ Rails.application.routes.draw do
     resources :chef_ratings, only: [:new, :create]
     resources :menu_likes, only: [:new, :create]
   end
-  
+
   resources :restaurants do
     resources :bookings, only: [:new, :create]
   end
