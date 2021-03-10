@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_08_135742) do
+ActiveRecord::Schema.define(version: 2021_03_09_174153) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -92,6 +92,15 @@ ActiveRecord::Schema.define(version: 2021_03_08_135742) do
     t.index ["chef_id"], name: "index_menus_on_chef_id"
   end
 
+  create_table "post_likes", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id"
+    t.bigint "post_id"
+    t.index ["post_id"], name: "index_post_likes_on_post_id"
+    t.index ["user_id"], name: "index_post_likes_on_user_id"
+  end
+
   create_table "posts", force: :cascade do |t|
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
@@ -130,5 +139,7 @@ ActiveRecord::Schema.define(version: 2021_03_08_135742) do
   add_foreign_key "followers", "chefs"
   add_foreign_key "followers", "users"
   add_foreign_key "menus", "chefs"
+  add_foreign_key "post_likes", "posts"
+  add_foreign_key "post_likes", "users"
   add_foreign_key "posts", "chefs"
 end
