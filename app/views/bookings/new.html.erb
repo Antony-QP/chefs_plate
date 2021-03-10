@@ -2,7 +2,7 @@
     <div class="booking-form" >
         <%= simple_form_for [@restaurant, @booking] do |f| %>
         <%=  f.input :start_date, as: :date %>
-        <%# <%= f.input :times, collection: Booking::TIMES %> %>
+        <%= f.input :start_time, collection: Booking::TIMES %>
         <%= f.submit %>
         <%  end %>
     </div>
