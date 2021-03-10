@@ -60,15 +60,13 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   navigator.geolocation.getCurrentPosition((position)=>{
-    console.log(position.coords.longitude, position.coords.latitude)
- fetch("/users", {
+   fetch("/users", {
    method: "PATCH",
-   body: JSON.stringify({ longitude: position.value,
-   latitude: position.value })
- })
+   body: JSON.stringify({ longitude: position.coords.longitude,
+   latitude: position.coords.latitude })
+  })
      .then(response => response.json())
      .then((data) => {
-       console.log(data);
      });
   })
 
