@@ -1,0 +1,19 @@
+<% @followers.each do |follower| %>
+    <% if follower.user_id == current_user.id%>
+        <%= follower %>
+    <% end %>
+<% end %>
+
+<% @menu_likes.each do |menu_like| %>
+    <% if menu_like.user_id == current_user.id%>
+        <%= menu_like %>
+    <% end %>
+<% end %>
+
+<% @bookings.each do |booking| %>
+    <% if booking.user_id == current_user.id%>
+        <%= booking %>
+    <% end %>
+<% end %>
+
+
