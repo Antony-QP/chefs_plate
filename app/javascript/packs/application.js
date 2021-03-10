@@ -59,6 +59,9 @@ const insertMap = () => {
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  navigator.geolocation.getCurrentPosition((position)=>{
+    console.log(position)
+  })
   initMapbox();
   initStarRating();
   icon.addEventListener('click', insertMap)
