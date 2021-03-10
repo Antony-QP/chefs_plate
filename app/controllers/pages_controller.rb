@@ -3,6 +3,12 @@ class PagesController < ApplicationController
     @chefs = Chef.limit(4)
   end
 
+  def dashboard
+    @followers = Follower.all
+    @menu_likes = MenuLike.all
+    @bookings = Booking.all
+  end
+  
   def chefit
     @restaurants = Restaurant.near([current_user.latitude, current_user.longitude], 200)
 

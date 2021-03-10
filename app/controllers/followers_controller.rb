@@ -14,6 +14,6 @@ class FollowersController < ApplicationController
       @follower.user = current_user
       @follower.chef = @chef
       @follower.save
-      redirect_to followers_path
+      redirect_to chefs_path
     end
 end

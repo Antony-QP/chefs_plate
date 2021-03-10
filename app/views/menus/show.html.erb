@@ -61,7 +61,11 @@
           </div>
         </div>
         <div class="col-sm text-center bg-success">
-          <div class="menu-image-main rounded mt-3" style="background-image: url('<%= cl_image_path @menu.photos[0].key, crop: :fill %>');"></div>
+          <%= link_to chef_menu_likes_path(@menu), method: :post do %>
+          <span class="float-right"><i class="far fa-bookmark text-info"></i></span>
+        <% end  %>
+          <div class="menu-image-main rounded mt-3" style="background-image: url('<%= cl_image_path @menu.photos[0].key, crop: :fill %>');">    
+          </div>
         <div class="mb-3 mt-3">
           <span class="text-info"><%= @menu.title %></span>
         </div>
