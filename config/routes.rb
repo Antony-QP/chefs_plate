@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :chefs, only: [:index, :show] do
     resources :menus, only: [:index ]
     resources :posts, only: [:index]
+    resources :post_likes, only: [:new, :create]
     resources :followers, only: [:new, :create]
     resources :chef_ratings, only: [:new, :create]
   end

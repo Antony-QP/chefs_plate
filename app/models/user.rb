@@ -7,5 +7,6 @@ class User < ApplicationRecord
   has_many :chef_ratings
   has_many :bookings
   has_many :received_bookings, through: :bookings
+  has_many :post_likes
   has_one_attached :avatar
 end
