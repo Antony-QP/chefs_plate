@@ -60,8 +60,18 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   navigator.geolocation.getCurrentPosition((position)=>{
-    console.log(position)
+    console.log(position.coords.longitude, position.coords.latitude)
+ fetch("/users", {
+   method: "PATCH",
+   body: JSON.stringify({ longitude: position.value,
+   latitude: position.value })
+ })
+     .then(response => response.json())
+     .then((data) => {
+       console.log(data);
+     });
   })
+
   initMapbox();
   initStarRating();
   icon.addEventListener('click', insertMap)
