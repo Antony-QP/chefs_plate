@@ -19,10 +19,10 @@
         <div class="d-flex justify-content-between mb-1 border-bottom">
           <div class="">
             <span class="font-weight-bold">
-            <%= link_to chef_path(top_chef.chef) do %>
-              <%= top_chef.chef.first_name %> <%= top_chef.chef.last_name %></span>
+            <%= link_to chef_path(top_chef) do %>
+              <%= top_chef.first_name %> <%= top_chef.last_name %></span>
           <% end %>
-            <div class=""><span><%= top_chef.chef.restaurant.name %></span></div>
+            <div class=""><span><%= top_chef.restaurant.name %></span></div>
           </div>
           <div class="">
 
@@ -31,25 +31,25 @@
           </div>
         </div>
         <div class="">
-          <i class="fas fa-map-marker-alt text-primary mr-2"></i><span class="location-name"><%= top_chef.chef.restaurant.location %></span>
+          <i class="fas fa-map-marker-alt text-primary mr-2"></i><span class="location-name"><%= top_chef.restaurant.location %></span>
         </div>
         <div class="chef-card-img-container">
           <div
             class="chef-card-img rounded"
             style="
-              background-image: url('<%= cl_image_path top_chef.chef.photos[0].key, crop: :fill %>');
+              background-image: url('<%= cl_image_path top_chef.photos[0].key, crop: :fill %>');
             "
           ></div>
           <div
             class="chef-card-img rounded"
             style="
-              background-image: url('<%= cl_image_path top_chef.chef.menus[0].photos[0].key, crop: :fill %>');
+              background-image: url('<%= cl_image_path top_chef.menus[0].photos[0].key, crop: :fill %>');
             "
           ></div>
           <div
             class="chef-card-img rounded"
             style="
-              background-image: url('<%= cl_image_path top_chef.chef.menus[0].photos[1].key, crop: :fill %>');
+              background-image: url('<%= cl_image_path top_chef.menus[0].photos[1].key, crop: :fill %>');
             "
           ></div>
             </div>

@@ -4,13 +4,15 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get 'chefit', to: 'pages#chefit', as: 'chefit'
 
+  patch 'user_coords', to: 'users#update'
+
   resources :chefs, only: [:index, :show] do
     resources :menus, only: [:index ]
     resources :posts, only: [:index]
     resources :followers, only: [:new, :create]
     resources :chef_ratings, only: [:new, :create]
   end
-  
+
   resources :restaurants do
     resources :bookings, only: [:new, :create]
   end
