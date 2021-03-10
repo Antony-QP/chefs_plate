@@ -31,6 +31,10 @@
   font-size: 38px;
 }
 
+.top-container {
+  margin-top: 40px;
+}
+
 .chef-card-grid-container2 {
     display: grid;
     justify-items: center;
@@ -39,9 +43,20 @@
 }
 
 .chef-card2{
-    width: 100%;
-    height: auto;
-    padding: 10px;
-    margin-top: 50px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  margin-top: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.title-chefit {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+.title-chefit:hover {
+  text-decoration: none!important;
+  color: $primary;
 }
