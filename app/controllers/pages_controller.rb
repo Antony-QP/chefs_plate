@@ -3,6 +3,12 @@ class PagesController < ApplicationController
     @chefs = Chef.limit(4)
   end
 
+  def dashboard
+    @followers = Follower.all
+    @menu_likes = MenuLike.all
+    @bookings = Booking.all
+  end
+
 
   def chefit
     @top_chefs = ChefRating.select { |chef| chef.average_rating > 4}

@@ -17,22 +17,6 @@
         <div class="following-chef-grid">
             <% @followers.each do |follower| %>
             <% if follower.user_id == current_user.id  %>
-            <div class="mr-2 ">
-                <div class="d-flex mt-2">
-                    <div
-                    class="follower-image rounded"
-                    style="
-                      background-image: url('<%= cl_image_path follower.chef.photos[0].key, crop: :fill %>');
-                    "
-                  ></div>
-                  <div class="w-100">
-                      <%= link_to chef_path (follower.chef) do %>
-                      <span class="font-weight-bold border-bottom chef-full-name text-info"><%= follower.chef.first_name %> <%= follower.chef.last_name %></span>
-                    <% end %>
-                    <span class="chef-restaurant text-info"><%= follower.chef.restaurant.name %></span>
-                  </div>
-                </div>
-            </div>
             <% end  %>
             <% end  %>
         </div>

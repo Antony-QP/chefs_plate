@@ -1,0 +1,19 @@
+.nav-item-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+    background-color: white;
+    height: 42px;
+    width: 85px;
+    border: $primary 1px solid;
+    margin-bottom: 5px;
+  }
+
+  .nav-tabs .nav-item .nav-link {
+    color: $info;
+  }
+
+  .nav-tabs .nav-item .nav-link.active {
+    color: $primary;
+  }
