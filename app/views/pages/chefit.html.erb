@@ -11,6 +11,11 @@
   </div>
 
 <div class="p-2 mt-3 chef-flex-container">
+    <div class="top-container">
+      <div class="col-12">
+        <h2 class ="h2-hp"><strong>A selection of the best Chefs in your neighbourhood</strong></h2>
+      </div>
+    </div>
   <div class="chef-card-grid-container2">
 
     <% @top_chefs.sample(3).each do |top_chef| %>
@@ -20,7 +25,7 @@
           <div class="">
             <span class="font-weight-bold">
             <%= link_to chef_path(top_chef) do %>
-              <%= top_chef.first_name %> <%= top_chef.last_name %></span>
+              <div class="title-chefit"><%= top_chef.first_name %> <%= top_chef.last_name %></div></span>
           <% end %>
             <div class=""><span><%= top_chef.restaurant.name %></span></div>
           </div>
