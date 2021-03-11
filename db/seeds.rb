@@ -379,7 +379,7 @@ post_1.save!
 
 post_2_picture = URI.open('https://images.unsplash.com/photo-1606677661991-446cea8ee182?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8YmVlZnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 post_2 = Post.new({
-    description: "we have been experimenting with our new in house smoker.  30 day old aged rib eyes have been in for 2 days and looking good!", 
+    description: "we have been experimenting with our new in house smoker.  30 day old aged rib eyes have been in for 2 days and looking good!",
     chef_id: chef_1.id
 })
 post_2.photo.attach(io: post_2_picture, filename: 'post2.png', content_type: 'image/png')
@@ -387,7 +387,7 @@ post_2.save!
 
 post_3_picture = URI.open('https://images.unsplash.com/photo-1597771125516-4eddaf867446?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2251&q=80')
 post_3 = Post.new({
-    description: "Our truffle dealer from Milan has been to visit us and brought us some of the most incredible black truffles.  We have been teaming  up with our pastry chef to create an outstading fresh pasta with black truffle dish", 
+    description: "Our truffle dealer from Milan has been to visit us and brought us some of the most incredible black truffles.  We have been teaming  up with our pastry chef to create an outstading fresh pasta with black truffle dish",
     chef_id: chef_1.id
 })
 post_3.photo.attach(io: post_3_picture, filename: 'post3.png', content_type: 'image/png')
@@ -395,7 +395,7 @@ post_3.save!
 
 post_4_picture = URI.open('https://images.unsplash.com/photo-1601001815853-3835274403b3?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTN8fGNoZWYlMjBjb29raW5nfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 post_4 = Post.new({
-    description: Faker::Food.description, 
+    description: Faker::Food.description,
     chef_id: chef_2.id
 })
 post_4.photo.attach(io: post_4_picture, filename: 'post4.png', content_type: 'image/png')
@@ -403,7 +403,7 @@ post_4.save!
 
 post_5_picture = URI.open('https://images.unsplash.com/photo-1581349485608-9469926a8e5e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTl8fGNoZWYlMjBjb29raW5nfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 post_5 = Post.new({
-    description: Faker::Food.description, 
+    description: Faker::Food.description,
     chef_id: chef_3.id
 })
 post_5.photo.attach(io: post_5_picture, filename: 'post5.png', content_type: 'image/png')
@@ -419,7 +419,7 @@ post_5.save!
 
 post_7_picture = URI.open('https://images.unsplash.com/photo-1560963689-b9e9773ff232?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTd8fGNoZWYlMjBjb29raW5nfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 post_7 = Post.new({
-    description: Faker::Food.description, 
+    description: Faker::Food.description,
     chef_id: chef_4.id
 })
 post_7.photo.attach(io: post_7_picture, filename: 'post7.png', content_type: 'image/png')
@@ -435,7 +435,7 @@ post_7.save!
 
 post_9_picture = URI.open('https://images.unsplash.com/photo-1605760652327-d25d8305009c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTR8fGxvYnN0ZXJ8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 post_9 = Post.new({
-    description: Faker::Food.description, 
+    description: Faker::Food.description,
     chef_id: chef_5.id
 })
 post_9.photo.attach(io: post_9_picture, filename: 'post9.png', content_type: 'image/png')
@@ -467,7 +467,7 @@ post_11.save!
 
 post_13_picture = URI.open('https://i.pinimg.com/474x/ee/96/3b/ee963bcbce954d74430aa7a5a1b06848.jpg')
 post_13 = Post.new({
-    description: Faker::Food.description, 
+    description: Faker::Food.description,
     chef_id: chef_7.id
 })
 post_13.photo.attach(io: post_13_picture, filename: 'post13.png', content_type: 'image/png')
@@ -483,7 +483,7 @@ post_13.save!
 
 post_15_picture = URI.open('https://i.pinimg.com/474x/e9/31/1e/e9311e4e4b9103331e903ab6f4d8c5ac.jpg')
 post_15 = Post.new({
-    description: Faker::Food.description, 
+    description: Faker::Food.description,
     chef_id: chef_8.id
 })
 post_15.photo.attach(io: post_15_picture, filename: 'post15.png', content_type: 'image/png')
@@ -499,7 +499,7 @@ post_15.save!
 
 post_17_picture = URI.open('https://i.pinimg.com/474x/73/6b/36/736b369a0dfb92b320e5ca56582197e4.jpg')
 post_17 = Post.new({
-    description: Faker::Food.description, 
+    description: Faker::Food.description,
     chef_id: chef_9.id
 })
 post_17.photo.attach(io: post_17_picture, filename: 'post17.png', content_type: 'image/png')
@@ -515,7 +515,7 @@ post_17.save!
 
 post_19_picture = URI.open('https://i.pinimg.com/474x/40/06/e3/4006e36d8fc37eb64de6680783e3b7d0.jpg')
 post_19 = Post.new({
-    description: Faker::Food.description, 
+    description: Faker::Food.description,
     chef_id: chef_10.id
 })
 post_19.photo.attach(io: post_19_picture, filename: 'post19.png', content_type: 'image/png')
@@ -531,7 +531,7 @@ post_19.save!
 
 post_21_picture = URI.open('https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=653&q=80')
 post_21 = Post.new({
-    description: Faker::Food.description, 
+    description: Faker::Food.description,
     chef_id: chef_11.id
 })
 post_21.photo.attach(io: post_21_picture, filename: 'post21.png', content_type: 'image/png')
@@ -547,7 +547,7 @@ post_21.save!
 
 post_23_picture = URI.open('https://images.unsplash.com/photo-1529042410759-befb1204b468?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=633&q=80')
 post_23 = Post.new({
-    description: Faker::Food.description, 
+    description: Faker::Food.description,
     chef_id: chef_12.id
 })
 post_23.photo.attach(io: post_23_picture, filename: 'post23.png', content_type: 'image/png')
@@ -563,7 +563,7 @@ post_23.save!
 
 post_25_picture = URI.open('https://images.unsplash.com/photo-1481070555726-e2fe8357725c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80')
 post_25 = Post.new({
-    description: Faker::Food.description, 
+    description: Faker::Food.description,
     chef_id: chef_13.id
 })
 post_25.photo.attach(io: post_25_picture, filename: 'post25.png', content_type: 'image/png')
@@ -579,7 +579,7 @@ post_25.save!
 
 post_27_picture = URI.open('https://images.unsplash.com/photo-1546241072-48010ad2862c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80')
 post_27 = Post.new({
-    description: Faker::Food.description, 
+    description: Faker::Food.description,
     chef_id: chef_14.id
 })
 post_27.photo.attach(io: post_27_picture, filename: 'post27.png', content_type: 'image/png')
@@ -595,7 +595,7 @@ post_27.save!
 
 post_29_picture = URI.open('https://images.unsplash.com/photo-1536693419517-38712b94e24f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')
 post_29 = Post.new({
-    description: Faker::Food.description, 
+    description: Faker::Food.description,
     chef_id: chef_15.id
 })
 post_29.photo.attach(io: post_29_picture, filename: 'post29.png', content_type: 'image/png')
@@ -611,7 +611,7 @@ post_29.save!
 
 post_31_picture = URI.open('https://images.unsplash.com/photo-1521471109507-43d61bb345dd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80')
 post_31 = Post.new({
-    description: Faker::Food.description, 
+    description: Faker::Food.description,
     chef_id: chef_16.id
 })
 post_31.photo.attach(io: post_31_picture, filename: 'post31.png', content_type: 'image/png')
@@ -627,7 +627,7 @@ post_31.save!
 
 post_33_picture = URI.open('https://images.unsplash.com/photo-1483918793747-5adbf82956c4?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80')
 post_33 = Post.new({
-    description: Faker::Food.description, 
+    description: Faker::Food.description,
     chef_id: chef_17.id
 })
 post_33.photo.attach(io: post_33_picture, filename: 'post33.png', content_type: 'image/png')
@@ -643,7 +643,7 @@ post_33.save!
 
 post_35_picture = URI.open('https://images.unsplash.com/photo-1560963806-394647f30329?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1308&q=80')
 post_35 = Post.new({
-    description: Faker::Food.description, 
+    description: Faker::Food.description,
     chef_id: chef_18.id
 })
 post_35.photo.attach(io: post_35_picture, filename: 'post35.png', content_type: 'image/png')
@@ -659,7 +659,7 @@ post_35.save!
 
 post_37_picture = URI.open('https://images.unsplash.com/photo-1609326747670-55d980f0fee1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80')
 post_37 = Post.new({
-    description: Faker::Food.description, 
+    description: Faker::Food.description,
     chef_id: chef_19.id
 })
 post_37.photo.attach(io: post_37_picture, filename: 'post37.png', content_type: 'image/png')
@@ -675,7 +675,7 @@ post_37.save!
 
 post_39_picture = URI.open('https://images.unsplash.com/photo-1448043552756-e747b7a2b2b8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1249&q=80')
 post_39 = Post.new({
-    description: Faker::Food.description, 
+    description: Faker::Food.description,
     chef_id: chef_20.id
 })
 post_39.photo.attach(io: post_39_picture, filename: 'post39.png', content_type: 'image/png')
@@ -1448,7 +1448,7 @@ follower_1 = Follower.create!({
     user_id: user_1.id
 })
 
-#  Ratings 
+#  Ratings
 
 chef_rating_1 = ChefRating.new({
     rating: 5,

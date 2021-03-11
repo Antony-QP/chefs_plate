@@ -35,21 +35,54 @@
     </div>
     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
         <div class="container">
-            <div class="following-chef-grid">
-                <% @bookings.each do |booking| %>
-                    <% if booking.user_id == current_user.id%>
-                        <%= booking %>
+            <div class="menu-chef-grid-dashboard mt-2">
+                <% @menu_likes.each do |menu_like| %>
+                    <% if menu_like.user_id == current_user.id%>
+                        <%= link_to  menu_path(menu_like.menu) do %>
+                            <div class="card-display-menus auto-width">
+                                <div class="menu-thumbnail w-100" id="border-radius-image" style="background-image: url('<%=        cl_image_path menu_like.menu.photos[0].key, crop: :fill %>');">
+                                </div>
+                                <div id="menu-description-details">
+                                    <div class="title-menu-additional-styling">
+                                    <strong><%= menu_like.menu.title %></strong>
+                                    </div>
+                                    <div class="cuisine-menu-additional-styling">Cuisine: <%= menu_like.menu.cuisine %></div>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="cuisine-menu-additional-styling">Price: <%= menu_like.menu.price %>€</div>
+                                        <div class=""><span class="menu-chef-name">By <%= menu_like.menu.chef.first_name %> <%= menu_like.menu.chef.last_name %></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        <% end  %>
                     <% end %>
                 <% end %>
             </div>
         </div>
     </div>
     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-        <% @bookings.each do |booking| %>
-            <% if booking.user_id == current_user.id%>
-                <%= booking %>
-            <% end %>
-        <% end %>
+        <div class="bookings-container d-flex">
+            <div class="booking-container-card m-auto w-50" >
+                <% @bookings.each do |booking|%>
+                    <% if booking.user_id == current_user.id%>
+                        <div class="booking-card d-flex">
+                            <div class="booking-date-time w-50">
+                                <p>Date: <b><%= booking.start_date %></b></p>
+                                <p>Time: <b><%= booking.start_time %></b></p>
+                                <p> @
+                                    <%= link_to chef_path(booking.restaurant.main_chef) do %> 
+                                    <strong> <%= booking.restaurant.name %></strong>
+                                    <% end %>
+                                </p> 
+                            </div>
+                            <div class="booking-card-restaurant w-50 d-flex justify-content-end">
+                                <div class="qr-code-booking" style="background-image: url('https://res.cloudinary.com/dk5aruokz/image/upload/v1615453944/kisspng-information-qr-code-android-download-qrcode-5b43f98eb18239.4735051715311814547271_eqolgv.png');">
+                                </div>
+                            </div>
+                        </div>
+                    <% end %>
+                <% end %>
+            </div>
+        </div>
     </div>
   </div>
 
