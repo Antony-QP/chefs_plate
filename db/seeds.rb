@@ -26,7 +26,7 @@ user_10 = User.create!(email: "sarah@gmail.com", password: "123456")
 
 puts "Creating restaurants"
 restaurant_1 = Restaurant.create!({
-    name: Faker::Restaurant.name,
+    name: "Les deux amis",
     location: "Wibautstraat 276"
 })
 restaurant_2 = Restaurant.create!({
@@ -148,8 +148,8 @@ chef_3.save!
 
 chef_4_picture = URI.open('https://i.pinimg.com/474x/dd/2a/dd/dd2add8b11b60c3fd6c9f9607eaba0d3.jpg')
 chef_4 = Chef.new({
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
+    first_name: "David",
+    last_name: "Baronne",
     email: Faker::Internet.email,
     inspiration: Faker::Lorem.sentence(word_count: 20),
     work_history: Faker::Lorem.sentence(word_count: 20),
@@ -187,8 +187,8 @@ chef_6.save!
 
 chef_7_picture = URI.open('https://i.pinimg.com/474x/c7/13/23/c71323e4a3bcbda941f85374e0697a44.jpg')
 chef_7 = Chef.new({
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
+    first_name: "Isabelle",
+    last_name: "Grande",
     email: Faker::Internet.email,
     inspiration: Faker::Lorem.sentence(word_count: 20),
     work_history: Faker::Lorem.sentence(word_count: 20),
@@ -200,8 +200,8 @@ chef_7.save!
 
 chef_8_picture = URI.open('https://i.pinimg.com/474x/e0/46/c3/e046c3dc7b3c1d5782e1aa44438a0d30.jpg')
 chef_8 = Chef.new({
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
+    first_name: "Bob",
+    last_name: "van den Akker",
     email: Faker::Internet.email,
     inspiration: Faker::Lorem.sentence(word_count: 20),
     work_history: Faker::Lorem.sentence(word_count: 20),
@@ -213,8 +213,8 @@ chef_8.save!
 
 chef_9_picture = URI.open('https://i.pinimg.com/474x/51/c2/8f/51c28f5428eabfc74df9ef56fd837578.jpg')
 chef_9 = Chef.new({
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
+    first_name: "Charles",
+    last_name: "ter Brugge",
     email: Faker::Internet.email,
     inspiration: Faker::Lorem.sentence(word_count: 20),
     work_history: Faker::Lorem.sentence(word_count: 20),
@@ -252,8 +252,8 @@ chef_11.save!
 
 chef_12_picture = URI.open('https://images.unsplash.com/photo-1566554273541-37a9ca77b91f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80')
 chef_12 = Chef.new({
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
+    first_name: "Serena",
+    last_name: "de Vries",
     email: Faker::Internet.email,
     inspiration: Faker::Lorem.sentence(word_count: 20),
     work_history: Faker::Lorem.sentence(word_count: 20),
@@ -278,8 +278,8 @@ chef_13.save!
 
 chef_14_picture = URI.open('https://images.unsplash.com/photo-1595475038784-bbe439ff41e6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80')
 chef_14 = Chef.new({
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
+    first_name: "Olivier",
+    last_name: "Kaartmans",
     email: Faker::Internet.email,
     inspiration: Faker::Lorem.sentence(word_count: 20),
     work_history: Faker::Lorem.sentence(word_count: 20),
@@ -291,8 +291,8 @@ chef_14.save!
 
 chef_15_picture = URI.open('https://images.unsplash.com/photo-1577219491135-ce391730fb2c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=625&q=80')
 chef_15 = Chef.new({
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
+    first_name: "Frans",
+    last_name: "de Slager",
     email: Faker::Internet.email,
     inspiration: Faker::Lorem.sentence(word_count: 20),
     work_history: Faker::Lorem.sentence(word_count: 20),
@@ -330,8 +330,8 @@ chef_17.save!
 
 chef_18_picture = URI.open('https://images.unsplash.com/photo-1581349485608-9469926a8e5e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=700&q=80')
 chef_18 = Chef.new({
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
+    first_name: "Daniël",
+    last_name: "Sompietoux",
     email: Faker::Internet.email,
     inspiration: Faker::Lorem.sentence(word_count: 20),
     work_history: Faker::Lorem.sentence(word_count: 20),
@@ -696,7 +696,13 @@ menu_1_picture_2 = URI.open('https://images.unsplash.com/photo-1467003909585-2f8
 paper_menu_picture_1 = URI.open('https://i.pinimg.com/originals/15/f6/19/15f61972261c3ea32b1339dae2234bbd.png')
 menu_1 = Menu.new({
     title: "Summer Fish Tasting Menu",
-    chefs_note: Faker::Lorem.sentence(word_count: 100),
+    chefs_note: "The seasons play an essential role at Visaandeschelde and our menu changes accordingly. The menu also includes different types of oysters and delicious lobster. The treasure of the à la carte menu is an ever-changing ‘Exclusive Seafood’ dish.
+
+    We also serve day-fresh Fruits de Mer. Because Visaandeschelde works with fresh products daily, we have a limited amount of various sea-delights available. If you know in advance that you would like to have the Fruits de Mer, let us know beforehand so that we can reserve the Fruits de Mer for you.
+    
+    In addition to the à la carte dishes, you can select the monthly changing Chef’s Menu, which the kitchen team of Visaandeschelde takes great pride in composing.
+    
+    With our valued business guests in mind, Visaandeschelde offers the ‘Business Power Lunch’. You and your business partner or special business relation can enjoy the culinary delights of this light and healthy lunch menu within the space of an hour.",
     price: Faker::Number.decimal(l_digits: 2),
     cuisine: "Spanish",
     chef_id: chef_1.id
@@ -775,21 +781,21 @@ menu_5.photos.attach(io: paper_menu_picture_5, filename: 'paper_menu_picture_5.p
 menu_5.save!
 sleep(4)
 
-# menu_6_picture_1 = URI.open('https://i.pinimg.com/474x/e5/32/b0/e532b0f5dfc750c26c4a1eeb268b827b.jpg')
-# menu_6_picture_2 = URI.open('https://i.pinimg.com/474x/1d/4f/23/1d4f236a5ba2869f1fce3982f48e30a8.jpg')
-# paper_menu_picture_6 = URI.open('https://i.pinimg.com/474x/d1/8c/f4/d18cf4bf48c2686a00ee80b71ffb1abf.jpg')
-# menu_6 = Menu.new({
-#     title: "August game menu",
-#     chefs_note: Faker::Lorem.sentence(word_count: 20),
-#     price: Faker::Number.decimal(l_digits: 2),
-#     cuisine: "British",
-#     chef_id: chef_3.id
-# })
-# menu_6.photos.attach(io: menu_6_picture_1, filename: 'menu_6.png', content_type: 'image/png')
-# menu_6.photos.attach(io: menu_6_picture_2, filename: 'menu_6_2.png', content_type: 'image/png')
-# menu_6.photos.attach(io: paper_menu_picture_6, filename: 'paper_menu_picture_6.png', content_type: 'image/png')
-# menu_6.save!
-# sleep(4)
+menu_6_picture_1 = URI.open('https://i.pinimg.com/474x/e5/32/b0/e532b0f5dfc750c26c4a1eeb268b827b.jpg')
+menu_6_picture_2 = URI.open('https://i.pinimg.com/474x/1d/4f/23/1d4f236a5ba2869f1fce3982f48e30a8.jpg')
+paper_menu_picture_6 = URI.open('https://i.pinimg.com/474x/d1/8c/f4/d18cf4bf48c2686a00ee80b71ffb1abf.jpg')
+menu_6 = Menu.new({
+    title: "August game menu",
+    chefs_note: Faker::Lorem.sentence(word_count: 20),
+    price: Faker::Number.decimal(l_digits: 2),
+    cuisine: "British",
+    chef_id: chef_1.id
+})
+menu_6.photos.attach(io: menu_6_picture_1, filename: 'menu_6.png', content_type: 'image/png')
+menu_6.photos.attach(io: menu_6_picture_2, filename: 'menu_6_2.png', content_type: 'image/png')
+menu_6.photos.attach(io: paper_menu_picture_6, filename: 'paper_menu_picture_6.png', content_type: 'image/png')
+menu_6.save!
+sleep(4)
 
 menu_7_picture_1 = URI.open('https://i.pinimg.com/474x/f2/6a/9d/f26a9db5769c08c1fad743e1789f7c6e.jpg')
 menu_7_picture_2 = URI.open('https://i.pinimg.com/564x/7a/18/d7/7a18d781efc4aed6c184ed0af8ae23e9.jpg')
