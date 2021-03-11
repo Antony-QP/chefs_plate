@@ -30,8 +30,8 @@
             <div class=""><span><%= chef.restaurant.name %></span></div>
           </div>
           <div class="">
-            <%= link_to chef_followers_path(chef), method: :post do %>
-            <i class="far fa-heart text-primary"></i>
+            <%= link_to chef_followers_path(chef), method: :post, :remote => true do %>
+            <i class="far fa-heart"></i>
           <% end  %>
           </div>
         </div>

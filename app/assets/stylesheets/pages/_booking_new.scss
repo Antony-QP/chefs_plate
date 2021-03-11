@@ -2,9 +2,42 @@
    height: 90vh;
    background-position: bottom;
    background-size: cover;
+   background-image: linear-gradient(rgba(255, 183, 4, 0.1), rgba(0,0,0,0.1)), url('https://images.unsplash.com/photo-1566670829022-315601be23e5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
 }
 
-.booking-form {
-    width: 600px;
+.container-booking-form {
+    width: 60%;
+    padding-left: 150px;
+    padding-bottom: 20px;
+    padding-right: 150px;
     margin: auto;
+    margin-top: 20px;
+    background-color: rgba(1,1,1,0.5);
+    border-radius: 16px;
+}
+
+.booking-menu-title {
+    color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 12px;
+    font-size: 30px;
+    font-family: Roboto;
+    padding-top: 18px;
+    border-bottom: 1px solid lightgrey;
+}
+
+#booking-form-date {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.booking-form-year {}
+
+#booking-form-submit {
+    text-align: center;
+}
+
+.pt-20 {
+    padding-top: 20px;
 }

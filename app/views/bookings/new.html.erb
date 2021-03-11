@@ -1,9 +1,16 @@
-<div class="booking-background-img" style="background-image: url('https://images.unsplash.com/photo-1535980156496-87fc2cfcb832?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80')">
-    <div class="booking-form" >
-        <%= simple_form_for [@restaurant, @booking] do |f| %>
-        <%=  f.input :start_date, as: :date %>
-        <%= f.input :start_time, collection: Booking::TIMES %>
-        <%= f.submit %>
-        <%  end %>
+<div class="main-container-booking">
+    <div class="booking-background-img">
+        <div class="pt-20">
+            <div class="container-booking-form">
+                <div class="booking-menu-title">Book a table</div>
+                <div class="booking-form" >
+                    <%= simple_form_for [@restaurant, @booking] do |f| %>
+                    <div id="booking-form-year"><%=  f.input :start_date, as: :date, label: false %></div>
+                    <div id="booking-form-date"><%= f.input :start_time, collection: Booking::TIMES, label: false %></div>
+                    <div id="booking-form-submit"><%= f.submit "Book Restaurant", class:"btn btn-primary"%></div>
+                    <%  end %>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
