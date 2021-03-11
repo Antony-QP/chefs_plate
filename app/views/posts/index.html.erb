@@ -1,44 +1,43 @@
 <div class="container-post-card d-flex">
   <div class="container-posts-list">
-    <div class="chef-posts-grid">
-      <div id="posts-list-menu">
-        <div class="chef-show-img-profile"
-            style="background-image: url('<%= cl_image_path(@chef.photos[0].key, crop: :fill )%>')">
-        </div>
-          <div id="center-chef-name">
+  <div class="chef-posts-grid">
+    <div id="posts-list-menu">
+      <div class="chef-show-img-profile"
+          style="background-image: url('<%= cl_image_path(@chef.photos[0].key, crop: :fill )%>')">
+      </div>
+      <div id="center-chef-name">
             <%= @chef.first_name %> <%= @chef.last_name %>
-          </div>
-        <div class="">
-          <div class="below-chef-img d-flex justify-content-center mr-5">
-            <div class="">
-          </div>
+      </div>
+      <div class="">
+        <div class="below-chef-img d-flex justify-content-center mr-5">
+          <div class="">
         </div>
+      </div>
 
-        <div class="post-menu">
-          <div class="d-flex ml-3">
-            <div class="">
-              <a href="#">
-                <i class="fab fa-fw fa-instagram fa-2x"></i>
-              </a>
-            </div>
-            <div class="">
-              <a href="#">
-                <i class="fab fa-pinterest fa-2x"></i>
-              </a>
-            </div>
-            <div class="ml-2"><span>(<%= @chef.followers.count %> followers)</span></div>
+      <div class="post-menu">
+        <div class="d-flex followers-styling">
+          <div class="">
+            <a href="#">
+              <i class="fab fa-fw fa-instagram fa-2x"></i>
+            </a>
           </div>
-
-            <div class="chef1 d-flex justify-content-between">
-              <div class="">
-                <%= link_to chef_menus_path(@chef) do %>
-                <span class="text-info">Chef menus</span>
-                <% end %>
-              </div>
-             <div class="">
-              <i class="fas fa-chevron-right"></i>
-             </div>
+          <div class="">
+            <a href="#">
+              <i class="fab fa-pinterest fa-2x"></i>
+            </a>
+          </div>
+          </div>
+            <div class="followers-styling"><%= @chef.followers.count %> followers</div>
+          <div class="chef1 d-flex justify-content-between">
+            <div class="">
+              <%= link_to chef_posts_path(@chef) do %>
+              <span class="text-info">Chef posts</span>
+              <% end %>
             </div>
+           <div class="">
+            <i class="fas fa-chevron-right"></i>
+           </div>
+          </div>
 
             <div class="chef2 d-flex justify-content-between">
               <div class="">
@@ -50,10 +49,9 @@
                 <i class="fas fa-chevron-right"></i>
               </div>
             </div>
-
           </div>
-        </div>
       </div>
+    </div>
 
     <div class="container-post-card-items">
       <div id="post-header-restyling">Posts</div>
