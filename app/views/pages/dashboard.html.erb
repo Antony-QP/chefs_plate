@@ -65,17 +65,18 @@
                 <% @bookings.each do |booking|%>
                     <% if booking.user_id == current_user.id%>
                         <div class="booking-card d-flex">
-                            <div class="booking-date-time">
+                            <div class="booking-date-time w-50">
                                 <p>Date: <b><%= booking.start_date %></b></p>
                                 <p>Time: <b><%= booking.start_time %></b></p>
+                                <p> @
+                                    <%= link_to chef_path(booking.restaurant.main_chef) do %> 
+                                    <strong> <%= booking.restaurant.name %></strong>
+                                    <% end %>
+                                </p> 
                             </div>
-                            <div class="booking-card-restaurant">
-                                <div>
-                                    <h5>Restaurant:</h5>
+                            <div class="booking-card-restaurant w-50 d-flex justify-content-end">
+                                <div class="qr-code-booking" style="background-image: url('https://res.cloudinary.com/dk5aruokz/image/upload/v1615453944/kisspng-information-qr-code-android-download-qrcode-5b43f98eb18239.4735051715311814547271_eqolgv.png');">
                                 </div>
-                                    <%= link_to chef_path(booking.restaurant.main_chef) do %>
-                                    <strong><%= booking.restaurant.name %></strong>
-                                <% end %>
                             </div>
                         </div>
                     <% end %>
