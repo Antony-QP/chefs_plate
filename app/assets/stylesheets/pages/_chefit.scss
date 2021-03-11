@@ -6,7 +6,7 @@
   height: 87vh;
   width: 100%;
   background-size: cover;
-  background-image: linear-gradient(rgba(255, 183, 4, 0.3), rgba(0,0,0,0.3)), url("https://images.pexels.com/photos/4577179/pexels-photo-4577179.jpeg?cs=srgb&dl=pexels-rachel-claire-4577179.jpg&fm=jpg");
+  background-image: linear-gradient(rgba(255, 183, 4, 0.3), rgba(0,0,0,0.3)), url("https://images.unsplash.com/photo-1563220765-17b39c8dfb37?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2767&q=80");
   background-position: center;
   display: flex;
   justify-content: center;
@@ -17,18 +17,19 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: -150px;
+  margin-top: 330px;
 }
 
 .banner-title {
   color: white;
   font-size: 62px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .banner-sub-title {
   color: $primary;
   font-size: 38px;
+  margin-bottom: 25px;
 }
 
 .top-container {
