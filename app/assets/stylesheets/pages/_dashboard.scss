@@ -1,19 +1,26 @@
-.nav-item-2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 20px;
-    background-color: white;
-    height: 42px;
-    width: 85px;
-    border: $primary 1px solid;
-    margin-bottom: 5px;
-  }
 
-  .nav-tabs .nav-item .nav-link {
+ .nav-tabs .nav-item .nav-link {
     color: $info;
   }
 
   .nav-tabs .nav-item .nav-link.active {
     color: $primary;
   }
+
+//   .menu-thumbnail-dashboard{
+//     width: 100% !important;
+//     height: 200px;
+//     background-size: cover;
+//     background-position: center;
+//   }
+
+.menu-chef-grid-dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.menu-chef-name{
+  font-size: 10px;
+  color: $info;
+}
