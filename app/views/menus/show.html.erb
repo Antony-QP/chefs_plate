@@ -1,4 +1,4 @@
-<div class="container">
+<div>
   <div class="chef-posts-grid">
     <div id="posts-list-menu">
       <div class="chef-show-img-profile"
@@ -64,7 +64,7 @@
           <%= link_to chef_menu_likes_path(@menu), method: :post do %>
           <span class="float-right"><i class="far fa-bookmark text-info"></i></span>
         <% end  %>
-          <div class="menu-image-main rounded mt-3" style="background-image: url('<%= cl_image_path @menu.photos[0].key, crop: :fill %>');">    
+          <div class="menu-image-main rounded mt-3" style="background-image: url('<%= cl_image_path @menu.photos[0].key, crop: :fill %>');">
           </div>
         <div class="mb-3 mt-3">
           <span class="text-info"><%= @menu.title %></span>

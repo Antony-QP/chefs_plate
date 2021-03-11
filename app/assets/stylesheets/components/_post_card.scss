@@ -1,3 +1,12 @@
+#post-header-restyling {
+  margin-left: 20px;
+  font-size: 30px;
+  font-family: Roboto;
+  padding-top: 12px;
+  border-bottom: 1px solid lightgrey;
+  width: 80%;
+}
+
 .post-card-details {
     margin: 20px;
     width: 80%;
@@ -21,6 +30,7 @@
     padding-right: 15px;
     font-size: 14px;
     font-family: Roboto;
+    flex-grow: 1;
 }
 
 .post-card-description p {
@@ -54,19 +64,21 @@
 #postedon-styling {
   text-align: right;
   font-size: 14px;
-  padding: 10px;
   color: #393e46;
+  margin-bottom: 0;
 }
 
 .container-post-card-items {
-    margin-left: 30px;
-    margin-top: 50px;
+  margin-left: 30px;
+  margin-top: 15px;
 }
 
 .post-card-date-description {
   width: 70%;
-  height: 90%;
-  padding: 20px;
+  height: 100%;
+  padding: 5px 20px 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 #chef-profile-picture {
