@@ -1,5 +1,5 @@
 meta_product_name: "Chef's Plate"
 meta_title: "Chef's Plate - In Chefs We Trust"
 meta_description: "A new way to discover amazing food"
-meta_image: "cover-real.jpeg" # should exist in `app/assets/images/`
+meta_image: "cover-real.jpg" # should exist in `app/assets/images/`
 twitter_account: "@chefs_plate_2021"   # required for Twitter Cards
