@@ -1,7 +1,12 @@
+.followers-styling {
+  margin-left: 60px;
+  font-family: Roboto;
+  font-size: 14px;
+}
+
 .menu-container{
-    height: 70vh;
-    margin-bottom: 20px;
-    padding: 0 20px;
+  padding: 55px 65px;
+  width: 60%;
 }
 
 .left-hand-column,
@@ -14,7 +19,9 @@
 }
 
 .row-chef-menu{
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: 0px 0px 30px 15px #c9c9c9;
+  border-radius: 16px;
+  overflow: hidden;
 }
 
 .menu-image-main{
@@ -30,7 +37,18 @@
     height: 60vh;
     background-size: cover;
     background-position: center;
-    margin: 0 auto; 
+    margin: 0 auto;
+}
+
+.bg-info-menu {
+  background-color: #F5F5F6;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.border-radius-extra-styling {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .chefs-note{

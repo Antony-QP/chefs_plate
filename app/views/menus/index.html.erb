@@ -14,7 +14,7 @@
       </div>
 
       <div class="post-menu">
-        <div class="d-flex ml-3">
+        <div class="d-flex followers-styling">
           <div class="">
             <a href="#">
               <i class="fab fa-fw fa-instagram fa-2x"></i>
@@ -25,9 +25,8 @@
               <i class="fab fa-pinterest fa-2x"></i>
             </a>
           </div>
-          <div class="ml-2"><span>(<%= @chef.followers.count %> followers)</span></div>
           </div>
-
+            <div class="followers-styling"><%= @chef.followers.count %> followers</div>
           <div class="chef1 d-flex justify-content-between">
             <div class="">
               <%= link_to chef_posts_path(@chef) do %>
@@ -53,6 +52,10 @@
       </div>
     </div>
 
+<div id="container-menu-including-title">
+    <div>
+      <h1 id="menus-extra-styling">Menus</h1>
+    </div>
     <div class="menu-chef-grid">
       <% @chef.menus.each do |menu| %>
       <%= link_to  menu_path(menu) do %>
@@ -71,5 +74,6 @@
           <% end %>
         <% end  %>
     </div>
+  </div>
   </div>
 </div>
