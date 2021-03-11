@@ -63,11 +63,11 @@
             <%= cl_image_tag post.photo.key, crop: :fill, class:"post-card-image" %>
             <div class="post-card-date-description">
               <div class="">
-                <%= link_to chef_post_likes_path(post.id), method: :post do %>
-                  <div class="d-flex justify-content-end">
-                    <div class="">
-                      <i class="far fa-thumbs-up"></i>
-                    </div>
+                <%= link_to chef_post_likes_path(post.id), method: :post, class: "text-info", :remote => true do %>
+                <div class="d-flex justify-content-end">
+                  <div class="">
+                    <i class="far fa-thumbs-up"></i>
+                  </div>
                   </div>
                 <% end  %>
               </div>
