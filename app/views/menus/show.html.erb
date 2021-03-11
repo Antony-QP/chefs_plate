@@ -55,14 +55,14 @@
 
   <div class="menu-container text-center justify-content-center mt-3">
     <div class="row-chef-menu">
-      <div class="row">
-        <div class="col-sm border-right bg-info">
+      <div class="row no-gutters">
+        <div class="col-sm border-right bg-info-menu">
           <div class="menu-image-menu rounded mt-3 mb-3" style="background-image: url('<%= cl_image_path @menu.photos[2].key, crop: :fill %>');">
           </div>
         </div>
-        <div class="col-sm text-center bg-success">
+        <div class="col-sm text-center bg-success border-radius-extra-styling">
           <%= link_to chef_menu_likes_path(@menu), method: :post do %>
-          <span class="float-right"><i class="far fa-bookmark text-info"></i></span>
+          <span class="float-right mt-2 mr-2"><i class="far fa-bookmark text-info"></i></span>
         <% end  %>
           <div class="menu-image-main rounded mt-3" style="background-image: url('<%= cl_image_path @menu.photos[0].key, crop: :fill %>');">
           </div>

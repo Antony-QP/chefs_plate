@@ -53,6 +53,10 @@
       </div>
     </div>
 
+<div id="container-menu-including-title">
+    <div>
+      <h1 id="menus-extra-styling">Menus</h1>
+    </div>
     <div class="menu-chef-grid">
       <% @chef.menus.each do |menu| %>
       <%= link_to  menu_path(menu) do %>
@@ -71,5 +75,6 @@
           <% end %>
         <% end  %>
     </div>
+  </div>
   </div>
 </div>
