@@ -24,10 +24,10 @@ require("channels")
 
 // External imports
 import "bootstrap";
-// import { initColorHearts } from './yellowHearts'
 import { initMapbox } from '../plugins/init_mapbox';
 
 import { initStarRating } from '../plugins/init_star_rating';
+import { initIconColor } from '../plugins/init_icon_color';
 
 
 // Internal imports, e.g:
@@ -42,10 +42,8 @@ const mapContainer = document.querySelector(".map-container")
 // Media Queries
 const iphone = window.matchMedia('(max-width: 400px)')
 
-
+// Map
 const insertMap = () => {
-
-
     gridContainer.classList.toggle("toggle-single-column")
     gridContainer.classList.toggle("toggle-half-width")
     map.classList.toggle("toggle-hide-content")
@@ -53,9 +51,12 @@ const insertMap = () => {
     chefFlexContainer.classList.toggle("toggle-flex")
     icon.classList.toggle("toggle-hide-content")
     gridIcon.classList.toggle("toggle-hide-content")
-
   console.log("clicked")
 }
+
+// Likes
+
+
 
 const token = document.head.querySelector('meta[name="csrf-token"]').content
 
@@ -72,15 +73,11 @@ document.addEventListener('turbolinks:load', () => {
    body: JSON.stringify({ user: {longitude: position.coords.longitude,
    latitude: position.coords.latitude} })
   })
-     .then(response => response.json())
-     .then((data) => {
-      console.log(data)
-     });
   })
 
   initMapbox();
   initStarRating();
+  initIconColor();
   icon.addEventListener('click', insertMap)
   gridIcon.addEventListener('click', insertMap)
-  // initColorHearts()
 });

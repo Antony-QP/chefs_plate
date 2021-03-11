@@ -15,9 +15,9 @@
                     <div class="mr-2 ">
                         <div class="d-flex mt-2">
                             <div
-                            class="follower-image rounded"
+                            class="follower-image"
                             style="
-                              background-image: url('<%= cl_image_path follower.chef.photos[0].key, crop: :fill %>');
+                              background-image: url('<%= cl_image_path follower.chef.photos[0].key, crop: :fill %>'); border-radius: 16px;
                             "
                           ></div>
                           <div class="w-100">
