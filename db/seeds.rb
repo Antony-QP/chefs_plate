@@ -1519,3 +1519,73 @@ chef_rating_10 = ChefRating.new({
     user_id: user_10.id
 })
 chef_rating_10.save!
+
+chef_rating_11 = ChefRating.new({
+    rating: 5,
+    chef_id: chef_1.id,
+    user_id: user_1.id
+})
+chef_rating_11.save!
+
+chef_rating_12 = ChefRating.new({
+    rating: 5,
+    chef_id: chef_2.id,
+    user_id: user_2.id
+})
+chef_rating_12.save!
+
+chef_rating_13 = ChefRating.new({
+    rating: 5,
+    chef_id: chef_3.id,
+    user_id: user_3.id
+})
+chef_rating_13.save!
+
+chef_rating_14 = ChefRating.new({
+    rating: 5,
+    chef_id: chef_4.id,
+    user_id: user_4.id
+})
+chef_rating_14.save!
+
+chef_rating_15 = ChefRating.new({
+    rating: 5,
+    chef_id: chef_5.id,
+    user_id: user_5.id
+})
+chef_rating_15.save!
+
+chef_rating_16 = ChefRating.new({
+    rating: 5,
+    chef_id: chef_6.id,
+    user_id: user_6.id
+})
+chef_rating_16.save!
+
+chef_rating_17 = ChefRating.new({
+    rating: 5,
+    chef_id: chef_7.id,
+    user_id: user_7.id
+})
+chef_rating_17.save!
+
+chef_rating_18 = ChefRating.new({
+    rating: 5,
+    chef_id: chef_8.id,
+    user_id: user_8.id
+})
+chef_rating_18.save!
+
+chef_rating_19 = ChefRating.new({
+    rating: 5,
+    chef_id: chef_9.id,
+    user_id: user_9.id
+})
+chef_rating_19.save!
+
+chef_rating_20 = ChefRating.new({
+    rating: 5,
+    chef_id: chef_10.id,
+    user_id: user_10.id
+})
+chef_rating_20.save!
