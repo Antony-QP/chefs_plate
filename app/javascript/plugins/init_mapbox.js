@@ -24,7 +24,7 @@ const initMapbox = () => {
             element.style.fill = "#F4F4F4";
             element.style.backgroundColor = "rgba(25, 29, 14, 0.9)";
             element.style.borderRadius = "50%";
-            element.style.color = "#F4F4F4";
+            // element.style.color = "#F4F4F4";
 
             new mapboxgl.Marker(element)
                 .setLngLat([marker.lng, marker.lat])
@@ -35,7 +35,7 @@ const initMapbox = () => {
             const bounds = new mapboxgl.LngLatBounds();
             markers.forEach((marker) => bounds.extend([marker.lng, marker.lat]));
             // map.fitBounds(bounds, { padding: 50, maxZoom: 25, duration: 0 });
-            map.fitBounds(bounds, { top: 50, right: 60, maxZoom: 15, });
+            map.fitBounds(bounds, { top: 50, right: 60, maxZoom: 25, });
         };
         map.addControl(new MapboxGeocoder({
             accessToken: mapboxgl.accessToken,
