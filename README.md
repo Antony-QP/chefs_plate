@@ -22,7 +22,7 @@ SO if you are looking for new way to fnd truly great food, try Chef's Plate!
 
 ### Book a table
 
-![Alt text](/app/assets/images/chef_index.png)
+![Alt text](/app/assets/images/book_table.png)
 
 ### Tech Stack
 Built using Rails, Ruby, Postgres and Javascript
