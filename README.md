@@ -2,9 +2,9 @@
 
 ### Try a new way to find amazing food
 
-It's never been easier to find information on places to eat with so many sites and sources.  However, Who's to know what's true and what's not? Are we really satsified with one 5 star review from a member of the public?
+It's never been easier to find information on places to eat with so many sites and sources.  However, Who's to know what's true and what's not? Are we really satsified with one 5 star review from a member of the public? What if we had someone on the inside who coud give us better information?
 
-Chef's Plate is a platform that connects regular restaurant going people with chefs.  Here you will find out about the Chef's story, their journey and discoveries.  You can browse menus that they have worked on and find out what inspired them, the ingredients they used and technique.  You can also stay up to date with whats going on behind the scenes as chefs post from within the kitchen, sharing developments, cooking tips and more.
+Chef's Plate is a platform that connects regular restaurant going people with chefs.  Here you will find out about the chef's story, their journey and discoveries.  You can browse menus that they have worked on and find out what inspired them, the ingredients they used and technique.  You can also stay up to date with whats going on behind the scenes as chefs post from within the kitchen, sharing developments, cooking tips and more.
 
 SO if you are looking for new way to fnd truly great food, try Chef's Plate!
 
