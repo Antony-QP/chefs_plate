@@ -33,4 +33,4 @@ Built using Rails, Ruby, Postgres and Javascript
 - Share with friends 
 
 ### Licence 
-MIT - Antony Parker, Daan Dalman, Frans Scholten, Olivia Forbault
+MIT © Antony Parker, Daan Dalman, Frans Scholten, Olivia Forbault
