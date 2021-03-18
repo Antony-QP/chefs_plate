@@ -1,6 +1,6 @@
-#Chef's Plate - In Chefs We Trust
+# Chef's Plate - In Chefs We Trust
 
-###Try a new way to find amazing food
+### Try a new way to find amazing food
 
 It's never been easier to find information on places to eat with so many sites and sources.  However, Who's to know what's true and what's not? Are we really satsified with one 5 star review from a member of the public?
 
@@ -8,21 +8,29 @@ Chef's Plate is a platform that connects regular restaurant going people with ch
 
 SO if you are looking for new way to fnd truly great food, try Chef's Plate!
 
-###Find talented local chefs
+### Find talented local chefs
 
-###View their story
+![Alt text](/app/assets/images/chef_index.png)
 
-###Discover what's behind the menu
+### View their story
 
-###Book a table
+![Alt text](/app/assets/images/chefs_show.png)
 
-###Tech Stack
+### Discover what's behind the menu
+
+![Alt text](/app/assets/images/chef_menu_show.png)
+
+### Book a table
+
+![Alt text](/app/assets/images/chef_index.png)
+
+### Tech Stack
 Built using Rails, Ruby, Postgres and Javascript
 
-###How to use
+### How to use
 - Create a profile
 - Interact with chefs, rate, like or book a table at their restaurant
 - Share with friends 
 
-###Licence 
+### Licence 
 MIT - Antony Parker, Daan Dalman, Frans Scholten, Olivia Forbault
